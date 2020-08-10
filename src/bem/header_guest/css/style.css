@@ -1,0 +1,83 @@
+.logo {
+    width: 105.69px;
+    height: 40px;
+    left: 140px;
+    top: 155px;
+
+    margin-bottom: auto;
+}
+.logo {    line-height: 0; font-size: 0px; padding: 0px;
+}
+.logo-caption {
+    width: 53.19px;
+    height: 12.95px;
+    margin: 13.33px auto 13.72px 12.5px;
+}
+
+.logo::after{
+
+}
+
+header{
+    font-family: Montserrat, sans-serif;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 17px;
+    
+    background-color: #FFFFFF;
+    vertical-align: middle;
+box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);padding: 15px 140px 15px 140px;
+}
+
+body{background-color: silver;}
+.block div, .buttons li,.buttons ul, .buttons button{
+    display: inline-block;
+}
+
+.buttons {
+    float: right;
+}
+.buttons li {
+    color: rgba(31, 32, 65, 0.5);
+}
+
+.buttons li:first-child{
+    font-weight: bold;
+    color: rgba(31, 32, 65, 0.75);
+}
+.buttons button {
+    height: 34px;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    border-radius: 22px;
+    font-family: Montserrat, sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 12px;
+line-height: 15px;
+    border: none;
+    text-transform: uppercase;
+}
+.buttons button, .buttons li {
+    margin-left: 20px;
+}
+
+.login {
+    color: #BC9CFF;
+    padding: 9px 20px 10px 20px;
+    position: relative;
+}
+.login::before {
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    background: #FFFFFF;
+    width: 83px;
+    height: 30px;
+    border-radius: 15px;
+ content: "";
+}
+.registration {
+    padding: 9px 20px 10px 19px;    
+    color: #FFFFFF;
+}
