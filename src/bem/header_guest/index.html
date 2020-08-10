@@ -12,9 +12,10 @@
 <body>
     <header>
         <div class="header">
-            <div class="logo">
+            <div class="header__logo logo">
                 <a href="" class="logo__link">
-                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="logo__logo" width="40" height="40" viewBox="0 0 40 40" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M20.0003 27.0587C19.3533 27.0587 18.8239 26.5292 18.8239 25.8822C18.8239 21.3528 15.118 17.6469 10.5886 17.6469C9.94152 17.6469 9.41211 17.1175 9.41211 16.4704C9.41211 15.8234 9.94152 15.2939 10.5886 15.2939C16.4415 15.2939 21.1768 20.0292 21.1768 25.8822C21.1768 26.5292 20.6474 27.0587 20.0003 27.0587Z"
                             fill="url(#paint0_linear)" />
@@ -42,7 +43,7 @@
                             </linearGradient>
                         </defs>
                     </svg>
-                    <svg class="logo-caption" width="54" height="14" viewBox="0 0 54 14" fill="none"
+                    <svg class="logo__caption" width="54" height="14" viewBox="0 0 54 14" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M10.335 0.368008C10.5567 0.368008 10.7375 0.443841 10.8775 0.595508C11.0292 0.735508 11.105 0.916341 11.105 1.13801C11.105 1.34801 11.0292 1.52884 10.8775 1.68051C10.7375 1.83217 10.5567 1.90801 10.335 1.90801H6.5725V12.408C6.5725 12.6297 6.49667 12.8163 6.345 12.968C6.205 13.108 6.02417 13.178 5.8025 13.178C5.5925 13.178 5.41167 13.108 5.26 12.968C5.10833 12.8163 5.0325 12.6297 5.0325 12.408V1.90801H1.27C1.06 1.90801 0.879167 1.83217 0.7275 1.68051C0.575833 1.52884 0.5 1.34801 0.5 1.13801C0.5 0.916341 0.575833 0.735508 0.7275 0.595508C0.879167 0.443841 1.06 0.368008 1.27 0.368008H10.335Z"
@@ -62,22 +63,17 @@
                     </svg>
                 </a>
             </div>
-
-            <nav class="header__menu menu">
-                <ul class="menu__list">
-
-                    <a href="" class="menu__item_selected">О нас</a>
+            <div class="header__container">
+                <nav class="header__menu menu">
+                    <a href="" class="menu__item menu__item_selected">О нас</a>
                     <a href="" class="menu__item">Услуги</a>
                     <a href="" class="menu__item">Вакансии</a>
                     <a href="" class="menu__item">Новости</a>
                     <a href="" class="menu__item">Соглашения</a>
-                </ul>
-            </nav>
-            <div class=" header__buttons button">
-                <button class="button__login">Войти</button>
-                <button class="button__registration">Зарегестрироваться</button>
+                </nav>
+                    <a class="header__button header__button_login">Войти</a>
+                    <a class="header__button header__button_registration">Зарегестрироваться</a>
             </div>
-        </div>
         </div>
     </header>
 </body>
