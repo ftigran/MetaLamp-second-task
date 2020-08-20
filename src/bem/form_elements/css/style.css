@@ -170,17 +170,37 @@ option {
 
 .button_arrow {
   position: relative;
-  padding: 15px 94px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: center;
   color: #ffffff;
   background: -webkit-gradient(linear, left top, left bottom, from(#bc9cff), to(#8ba4f9));
   background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  width: 320px;
+}
+
+.button_arrow::after {
+  position: absolute;
+  display: block;
+  right: 0px;
+  top: 0px;
+  width: 44px;
+  text-align: center;
+  content: "arrow_forward";
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: normal;
+  text-transform: none;
+  font-size: 24px;
+  line-height: 44px;
+  color: #ffffff;
 }
 
 .button_arrow:hover {
   opacity: 0.5;
 }
 
-.button_arrow_forward_arrow {
+.button_arrow_forward_alrrow {
   position: absolute;
   right: 12px;
   top: 13px;
@@ -703,11 +723,12 @@ option {
 }
 
 .rate-button__box {
-  background: -webkit-gradient(linear, left top, left bottom, from(#BC9CFF), to(#8BA4F9));
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#bc9cff), to(#8ba4f9));
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
   margin-top: 18px;
   font-size: 0px;
   width: 120px;
+  height: 20px;
 }
 
 .rate-button__rate {
@@ -724,6 +745,126 @@ option {
   line-height: 20px;
   mix-blend-mode: screen;
   background-color: #ffffff;
+}
+
+.subscription-text-field {
+  position: relative;
+  width: 267px;
+}
+
+.subscription-text-field__title {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #1f2041;
+  margin-bottom: 5px;
+}
+
+.subscription-text-field__email {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+  width: 267px;
+  height: 44px;
+  padding-left: 15px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.subscription-text-field__submit {
+  position: absolute;
+  opacity: 0;
+}
+
+.subscription-text-field__submit-box {
+  position: absolute;
+  right: 10px;
+  top: 30px;
+  height: 20px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#bc9cff), to(#8ba4f9));
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+}
+
+.subscription-text-field__submit-label {
+  font-family: Material Icons;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 24px;
+  mix-blend-mode: screen;
+  background-color: #ffffff;
+}
+
+.features__list {
+  list-style: none;
+  padding-left: 0px;
+}
+
+.features__item {
+  width: 280px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-bottom: 20px;
+  position: relative;
+  padding-left: 58px;
+  border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+  height: 69px;
+}
+
+.features__item:last-of-type {
+  margin-bottom: 0px;
+}
+
+.features__ico {
+  font-family: Material Icons;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 48px;
+  mix-blend-mode: screen;
+  background-color: #ffffff;
+}
+
+.features__box {
+  position: absolute;
+  content: "";
+  background: -webkit-gradient(linear, left top, left bottom, from(#bc9cff), to(#8ba4f9));
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  width: 48px;
+  height: 48px;
+  left: 0px;
+}
+
+.features__text {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.features__title {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #1f2041;
+  text-transform: none;
+  font-size: 14px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 0px;
 }
 
 .div {
