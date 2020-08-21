@@ -1,0 +1,87 @@
+@import '../common.scss';
+
+
+// требует рефакторинг. Замена на extend
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+
+.page {
+  &__description {
+    position: absolute;
+    top: 150px;
+    left: -65px;
+    color: $DarkShade25;
+    transform: rotate(-90deg)
+  }
+}
+
+.block-lib {
+  padding-bottom: 21px;
+  padding-left: 50px;
+
+  &__description-row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  &__block-row {
+    padding-top: 5px;
+  }
+
+  &__title {
+    text-align: left;
+    line-height: 15px;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  &__mods {
+    text-align: right;
+    line-height: 15px;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  &_inline {
+    display: inline-block;
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  body {
+    margin: 0 auto;
+    padding: 0;
+    width: 90%;
+  }
+
+  .block-lib {
+    padding-left: 0;
+  }
+}
