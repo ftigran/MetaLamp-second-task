@@ -1,0 +1,96 @@
+@import '../../template/template.scss';
+
+.logo {
+    padding-left: 22px;
+    padding-top: 22px;
+}
+
+.container {
+    position: relative;
+}
+
+.color-collumn {
+    width: 270px;
+    padding-left: 143px;
+    padding-top: 68px;
+    position: relative;
+
+    &__item {
+        margin-bottom: 28px;
+    }
+
+    &__tile {
+        position: absolute;
+        border-radius: 6px;
+        width: 70px;
+        height: 70px;
+    }
+
+    &__text {
+        display: inline-block;
+        margin-left: 110px;
+    }
+
+    &__title {
+        padding-top: 8px;
+        margin: 0;
+        font-size: 19px;
+        line-height: 24px;
+    }
+
+    &__subtitle {
+        font-family: Montserrat;
+        font-size: 18px;
+        margin-top: 6px;
+    }
+}
+
+.type {
+    position: absolute;
+    left: 838px;
+    top: 67px;
+    width: 403px;
+
+    &__item {
+        margin-bottom: 54px;
+    }
+
+    &__tag {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        color:$dark-shade25;
+width: 37px;
+display: inline-block;
+text-align: right;
+        &_tag-h1 {
+            font-size: 24px;
+        }
+
+        &_tag-h2 {}
+
+        &_tag-h3 {}
+
+        &_tag-body {}
+    }
+
+    &__description {
+margin-left: 30px;
+display: inline-block;
+        &_tag-h1 {
+            @include h1-text;
+        }
+
+        &_tag-h2 {
+            @include h2-text;
+        }
+
+        &_tag-h3 {
+            @include h3-text;
+        }
+
+        &_tag-Body {
+            @include body-text;
+        }
+    }
+}

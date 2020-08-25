@@ -1,5 +1,7 @@
 const path = require('path')
-const {merge} = require('webpack-merge')
+const {
+    merge
+} = require('webpack-merge')
 const pug = require('./webpack/pug')
 const scss = require('./webpack/scss')
 const images = require('./webpack/images')
@@ -18,7 +20,9 @@ const PATHS = {
 
 const common = merge([{
         entry: {
-            'index':                PATHS.source + '/pages/index/index.js',},
+            'index': PATHS.source + '/pages/index/index.js',
+            'colors-and-type': PATHS.source + '/pages/colors-and-type/colors-and-type.js'
+        },
         output: {
             path: PATHS.build,
             filename: 'js/[name].js'
@@ -33,6 +37,11 @@ const common = merge([{
                 filename: 'index.html',
                 chunks: ['index', 'common'],
                 template: PATHS.source + '/pages/index/index.pug'
+            }),
+            new HtmlWebpackPlugin({
+                filename: 'colors-and-type.html',
+                chunks: ['colors-and-type', 'common'],
+                template: PATHS.source + '/pages/colors-and-type/colors-and-type.pug'
             }),
             new MiniCssExtractPlugin({
                 filename: '[name].css',
@@ -58,7 +67,7 @@ module.exports = function (env) {
     if (env === 'development') {
         return merge([
             common,
-        devServer()
+            devServer()
         ])
     }
 }

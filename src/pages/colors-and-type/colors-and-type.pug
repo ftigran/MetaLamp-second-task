@@ -1,1 +1,31 @@
-.ds dsadas
+include ../../modules/logo/logo
+mixin tile-color-set(name, color, opacity=1)
+    .color-collumn__item
+        .color-collumn__tile(
+            style="background:" + color + "; opacity: " + opacity
+            )
+        .color-collumn__text
+            h2.color-collumn__title=name
+            p.color-collumn__subtitle=color
+
+mixin type-set(tag, description)
+    .type__item
+        span(class='type__tag type__tag_tag-' + tag)=tag
+        div(class='type__description type__description_tag-' + tag.toLowerCase())=description
+
++logo(true)
+.container
+    .color-collumn
+        +tile-color-set('Dark Shade 100%', '#1F2041')
+        +tile-color-set('Dark Shade 75%', '#1F2041', 0.75)
+        +tile-color-set('Dark Shade 50%', '#1F2041', 0.5)
+        +tile-color-set('Dark Shade 25%', '#1F2041', 0.25)
+        +tile-color-set('Dark Shade 5%', '#1F2041', 0.05)
+        +tile-color-set('Purple', '#BC9CFF')
+        +tile-color-set('Green', '#6FCF97')
+    .type
+        +type-set('H1', 'This one is the sub-section or widget title')
+        +type-set('H2', 'Next one is the item title inside widgets')
+        +type-set('H3', 'This is a label or CTA text')
+        +type-set('Body', 
+        'This is the body text which is used for most of the design, like paragraphs, lists, etc.')
