@@ -1,0 +1,34 @@
+@import '../../template/template.scss';
+
+body {
+    margin: 30px;
+}
+
+.container {
+    margin-left: 111px;
+    margin-top: 62px;
+}
+
+.block-wrapper {
+    width: 320px;
+    margin-bottom: 18px;
+
+    &__text {
+        text-transform: uppercase;
+    }
+
+    &__title {
+        display: inline-block;
+        margin-top: 4px;
+        margin-bottom: 5px;
+    }
+
+    &__subtitle {
+        float: right;
+        font-size: 12px;
+        line-height: 15px;
+        margin-right: 1px;
+    }
+
+    &__block {}
+}
