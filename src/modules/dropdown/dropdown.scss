@@ -1,0 +1,24 @@
+.dropdown {
+    width: 320px;
+    height: 44px;
+
+    border: 1px solid $dark-shade25;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding-left: 13px;
+    padding-top: 8px;
+    position: relative;
+    color: $dark-shade75;
+    &__expand {
+        position: absolute;
+        width: 44px;
+        height: 44px;
+        top: 0px;
+        right: 0px;
+        font-size: 24px;
+        line-height: 40px;
+        text-align: center;
+        color: $dark-shade50;
+        @include material-font
+    }
+}

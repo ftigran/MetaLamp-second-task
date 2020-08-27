@@ -35,11 +35,18 @@
     color: rgba(31, 32, 65, 0.75);
 }
 
+@mixin material-font {
+    font-family: "Material Icons";
+    font-style: normal;
+    font-weight: normal;
+}
+
+
 body,
 a,
 button,
 ul {
-@include body-text;
+    @include body-text;
 }
 
 p {

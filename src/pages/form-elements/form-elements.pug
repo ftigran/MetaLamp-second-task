@@ -1,5 +1,4 @@
-include ../../modules/logo/logo
-include ../../modules/text-field/text-field
+include ../../template/template
 
 mixin block-wrapper(title, subtitle)
     .block-wrapper
@@ -14,4 +13,11 @@ mixin block-wrapper(title, subtitle)
     +block-wrapper('Text Field', 'Default')
         +text-field('Email', 'email')
     +block-wrapper('Text Field', 'Hover / Focus')
-        +text-field('This is pretty awesome', 'text')
+        +text-field('This is pretty awesome')
+    +block-wrapper('Dropdown', 'Default')
+        +dropdown('Сколько гостей')
+    +block-wrapper('masked text field', 'Default')
+        +text-field('ДД.ММ.ГГГГ')
+    +block-wrapper
+        +block-wrapper('date Dropdownd')
+        +block-wrapper('date Dropdown')
