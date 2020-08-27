@@ -41,6 +41,20 @@
     font-weight: normal;
 }
 
+@mixin border($passive:true) {
+    box-sizing: border-box;
+    border-radius: 4px;
+    box-sizing: border-box;
+    
+    @if $passive {
+        border: 1px solid $dark-shade25;
+    }
+
+    @else {
+        border: 1px solid $dark-shade50;
+    }
+
+}
 
 body,
 a,

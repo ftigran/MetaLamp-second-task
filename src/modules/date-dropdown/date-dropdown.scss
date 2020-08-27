@@ -1,11 +1,9 @@
-.dropdown {
-    width: 320px;
+.date-dropdown {
+    width: 150px;
     height: 44px;
-
     @include border;
-    padding-left: 13px;
-    padding-top: 8px;
-    color: $dark-shade75;
+    padding-left: 14px;
+    padding-top: 9px;
 
     &__expand {
         float: right;
@@ -14,6 +12,5 @@
         line-height: 26px;
         font-size: 24px;
         text-align: center;
-        color: $dark-shade50;
     }
 }
