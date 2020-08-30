@@ -1,0 +1,8 @@
+mixin checkbox-buttons(...items)
+    -let n = 0
+    ul.checkbox-buttons__list
+        each item in items
+            - n = n + 1
+            li.checkbox-buttons__item
+                input(type="checkbox", class="checkbox-buttons__checkbox" id=n)
+                label(class="checkbox-buttons__label" for=n)=item
