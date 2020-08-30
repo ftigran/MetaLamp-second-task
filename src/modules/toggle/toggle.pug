@@ -1,0 +1,22 @@
+mixin toggle(text='', checked='')
+    .toggle 
+        if checked==true
+            input(
+                type="checkbox"
+                name="toggle"
+                class="toggle__toggle"
+                id="toggle"
+                checked
+            )
+        else
+            input(
+                type="checkbox"
+                name="toggle"
+                class="toggle__toggle"
+                id="toggle"
+            )
+        
+        label(
+            class="toggle__label"
+            for="toggle"
+        )=text
