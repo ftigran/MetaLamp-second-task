@@ -1,7 +1,9 @@
 mixin text-field(placeholder, type='text', partclass="")
-    input(
-        type=type,
-        class='text-field ' + partclass,
-        placeholder=placeholder
-        )
+    .text-field
+        input(
+            type=type,
+            class='text-field__input ' + partclass,
+            placeholder=placeholder
+            )
+        block
         
