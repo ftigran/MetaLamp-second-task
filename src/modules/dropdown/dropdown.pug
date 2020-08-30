@@ -1,4 +1,4 @@
-mixin dropdown (placeholder, partclass="")
-    div(class = partclass+" dropdown")=placeholder
+mixin dropdown(text='', partclass='' )
+    div(class = "dropdown " + partclass)=text
         span.dropdown__expand expand_more 
         
