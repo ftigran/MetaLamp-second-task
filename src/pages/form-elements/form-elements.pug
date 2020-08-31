@@ -37,7 +37,12 @@ mixin block-wrapper(title, subtitle)
             +toggle('Получать спецпредложения', 1)
             +toggle('Получать спецпредложения')
         +block-wrapper('like button')
-            +like-button(2)
-            +like-button(12,1)
-
-            
+            .wrapper-inline-block
+                +like-button(2)
+            .wrapper-inline-block
+                +like-button(12,1)
+        +block-wrapper('rate button')
+            .wrapper-inline-block
+                +rate-button(4)
+            .wrapper-inline-block
+                +rate-button(5)            
