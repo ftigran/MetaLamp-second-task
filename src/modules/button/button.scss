@@ -1,0 +1,15 @@
+.button {
+    @include h3-text;
+    text-transform: uppercase;
+    color: #BC9CFF;
+    border: none;
+    background: none;
+
+    &:hover {
+        opacity: 0.5;
+    }
+
+    &_gray {
+        color: $dark-shade50
+    }
+}

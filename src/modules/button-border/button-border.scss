@@ -1,0 +1,18 @@
+.button-border {
+    display: inline-block;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    border-radius: 22px;
+    height: 44px;
+&:hover{
+    background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
+}
+    &__button {
+        @include h3-text;
+        margin: 2px;
+        border: none;
+        height: 40px;
+        border-radius: 20px;
+        padding: 8px 17px;
+        color: $purple;
+    }
+}

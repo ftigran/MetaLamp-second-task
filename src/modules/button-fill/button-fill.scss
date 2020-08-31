@@ -1,0 +1,12 @@
+.button-fill{
+    @include h3-text;
+    height: 44px;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    border-radius: 22px;
+    border: none;
+    color: #fff;
+    padding: 14px 19px;
+    &:hover{
+        opacity: 0.5;
+    }
+}

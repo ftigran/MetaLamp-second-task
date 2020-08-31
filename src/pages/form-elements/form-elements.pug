@@ -45,7 +45,21 @@ mixin block-wrapper(title, subtitle)
             .wrapper-inline-block
                 +rate-button(4)
             .wrapper-inline-block
-                +rate-button(5)        
-    .wrapper 
-       +block-wrapper('Range Slider', '5 000₽ - 10 000₽')
+                +rate-button(5)
+    .wrapper
+        +block-wrapper('Range Slider', '5 000₽ - 10 000₽')
             +range-slider
+        +block-wrapper('buttons')
+            div
+                +button-fill('click me')
+                +button-fill('click me', ' button_hovered')
+            div
+                +button-border('click me')
+                +button-border('click me', ' button_hovered')
+            +button('click me')
+            +button('click me', 1)
+            div
+                +button-arrow('перейти к оплате')
+
+
+
