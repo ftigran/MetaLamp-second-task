@@ -1,4 +1,20 @@
-mixin dropdown(text='', partclass='' )
-    div(class = "dropdown " + partclass)=text
-        span.dropdown__expand expand_more 
+mixin dropdown(text='', type, expanded, partclass='', ...numbs)
+    if expanded==true
+        div(class = "dropdown dropdown_expanded" + partclass)=text
+    else
+        div(class = "dropdown " + partclass)=text
+        span.dropdown__expand expand_more
+    if type='room'
+        -var names=['спальни', 'кровати', 'ванные комнаты']
+        -i=0
+        .dropdown__menu
+            each numb in numbs
+                .dropdown__item
+                    span.dropdown__name=names[i]
+                    span.dropdown__controls
+                        button.dropdown__button -
+                        span.dropdown__quantity=numb
+                        button.dropdown__button +
+                    -i++
+
         

@@ -62,6 +62,9 @@ mixin block-wrapper(title, subtitle)
                 +button-arrow('перейти к оплате')
         +block-wrapper('pagination')
             +pagination()
+.container
+    +block-wrapper('Dropdown', 'Default')
+            +dropdown('Сколько гостей','room',1,'' , '2', '2', '0')
 
 
 

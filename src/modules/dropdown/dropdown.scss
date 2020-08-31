@@ -16,4 +16,50 @@
         text-align: center;
         color: $dark-shade50;
     }
+
+    &_expanded {
+        width: 266px;
+        border-color: $dark-shade50;
+        border-radius: 2px 2px 0 0;
+    }
+
+    &__menu {
+        @include border;
+        border-top: none;
+        border-color: $dark-shade50;
+        border-radius: 0 0 2px 2px;
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 6px 7px 3px 15px;
+        
+    }
+
+    &__name {
+        @include h3-text
+    }
+
+    &__button {
+        width: 30px;
+        height: 30px;
+        border-radius: 15px;
+        box-sizing: border-box;
+        border: 1px solid $dark-shade25;
+        color: $dark-shade50;
+
+    }
+
+    &__quantity {
+        @include h3-text;
+        line-height: 30px;
+    }
+
+    &__controls {
+        display: flex;
+        justify-content: space-between;
+        width: 92px;
+    }
 }
