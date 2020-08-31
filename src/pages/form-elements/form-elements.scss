@@ -6,10 +6,16 @@ body {
 
 .container {
     margin-left: 111px;
+    margin-right: 136px;
+
     margin-top: 62px;
+    display: flex;
+    justify-content: space-between;
+}
+.wrapper{
+
     max-width: 320px;
 }
-
 .block-wrapper {
     margin-bottom: 18px;
 

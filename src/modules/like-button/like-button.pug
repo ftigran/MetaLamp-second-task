@@ -1,0 +1,22 @@
+-   let n = -1
+mixin like-button (quantity=0, checked='')
+    -n = n+1
+    div(class="like-button")
+        if checked==true
+            input(
+                type="checkbox" 
+                name="like" 
+                class="like-button__like" 
+                id="like"+n
+                checked
+                )
+        else
+            input(
+                type="checkbox" 
+                name="like" 
+                class="like-button__like" 
+                id="like"+n
+                )
+        .like-button__wrapper
+            label(class="like-button__label" for="like"+n)=quantity
+    
