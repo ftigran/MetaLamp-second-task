@@ -1,10 +1,13 @@
 include ../../template/template
 
-mixin block-wrapper(title, subtitle)
+mixin block-wrapper(title, subtitle, isexpandable=false)
     .block-wrapper
         .block-wrapper__text
             h3.block-wrapper__title=title
-            span.block-wrapper__subtitle=subtitle
+            if isexpandable==false
+                span.block-wrapper__subtitle=subtitle
+            else
+              span.block-wrapper__subtitle.block-wrapper__subtitle_expandable=subtitle  
         .block-wrapper__block
             block
 
@@ -63,8 +66,12 @@ mixin block-wrapper(title, subtitle)
         +block-wrapper('pagination')
             +pagination()
 .container
-    +block-wrapper('Dropdown', 'Default')
-            +dropdown('Сколько гостей','room',1,'' , '2', '2', '0')
-
+    .wrapper
+        +block-wrapper('Dropdown', 'Default')
+            +dropdown('2 спальни, 2 кровати...')
+        +block-wrapper('Dropdown', 'expanded')
+            +dropdown('2 спальни, 2 кровати...','room',1,'' , '2', '2', '0')
+        +block-wrapper('expandable checkbox list', 'expand_more', 1)
+            +expandable-checkbox-list('Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь')            
 
 

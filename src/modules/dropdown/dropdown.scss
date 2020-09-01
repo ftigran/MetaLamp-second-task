@@ -18,11 +18,12 @@
     }
 
     &_expanded {
-        width: 266px;
         border-color: $dark-shade50;
         border-radius: 2px 2px 0 0;
     }
-
+    &_for-room{
+        width: 266px;
+    }
     &__menu {
         @include border;
         border-top: none;
@@ -35,7 +36,7 @@
         justify-content: space-between;
         align-items: center;
         padding: 6px 7px 3px 15px;
-        
+
     }
 
     &__name {
@@ -54,12 +55,12 @@
 
     &__quantity {
         @include h3-text;
-        line-height: 30px;
     }
 
     &__controls {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         width: 92px;
     }
 }

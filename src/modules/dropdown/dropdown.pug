@@ -1,9 +1,10 @@
 mixin dropdown(text='', type, expanded, partclass='', ...numbs)
     if expanded==true
-        div(class = "dropdown dropdown_expanded" + partclass)=text
+        div(class = "dropdown dropdown_expanded dropdown_for-room" + partclass)=text
+            span.dropdown__expand expand_more
     else
         div(class = "dropdown " + partclass)=text
-        span.dropdown__expand expand_more
+            span.dropdown__expand expand_more
     if type='room'
         -var names=['спальни', 'кровати', 'ванные комнаты']
         -i=0
