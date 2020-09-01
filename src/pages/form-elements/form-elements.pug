@@ -93,3 +93,19 @@ mixin block-wrapper(title, subtitle, isexpandable=false)
                 'Без вечеринок и мероприятий', 
                 'Время прибытия — после 13:00, а выезд до 12:00'
                 )
+.container
+    .wrapper
+        +block-wrapper()
+            +features-list({
+                items:[
+                    {
+                    title:'Комфорт',
+                    subtitle:'Шумопоглощающие стены',
+                    ico: 'insert_emoticon'
+                    },
+                    {
+                    title: 'Удобство',
+                    subtitle: 'Окно в каждой из спален',
+                    ico: 'location_city'
+                    }
+                    ]})

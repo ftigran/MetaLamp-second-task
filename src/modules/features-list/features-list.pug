@@ -1,0 +1,12 @@
+mixin features-list(props={})
+    ul.features-list__list
+        -const {items}=props
+        each item in items
+            -const {title, subtitle, ico}=item
+            li.features-list__item
+                .features-list__ico-box
+                    span.features-list__ico=ico
+                .features-list__text
+                    h3.features-list__title=title
+                    .features-list__subtitle=subtitle
+                
