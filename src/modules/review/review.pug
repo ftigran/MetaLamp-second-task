@@ -1,0 +1,12 @@
+mixin review(fio, date, likes, text, template, isliked=false)
+    .review
+        .review__header
+            img(class="review__img" src=template alt="Аватарка")
+            .review__name-and-date-container
+                h3.review__name=fio
+                span.review__date=date
+        .review__body
+            .review__like
+                +like-button(likes,isliked)
+            p.review__text=text
+        

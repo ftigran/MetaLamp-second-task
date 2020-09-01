@@ -1,0 +1,38 @@
+.review {
+    max-width: 710px;
+
+    &__header {
+        display: flex;
+        justify-content: start;
+    }
+
+    &__img {
+        border-radius: 24px;
+        width: 44px;
+        height: 44px;
+    }
+
+    &__name {
+        margin-top: 0px;
+        margin-bottom: 3px;
+        font-size: 14px;
+        line-height: 19px;
+        text-transform: none;
+
+        &-and-date-container {
+            margin-left: 12px
+        }
+    }
+
+    &__body {
+        display: flex;
+        margin-top: 9px;
+    }
+
+    &__like {margin-top: 3px;
+    margin-left: 1px;}
+
+    &__date {}
+
+    &__text {margin-left: 14px;}
+}
