@@ -73,5 +73,17 @@ mixin block-wrapper(title, subtitle, isexpandable=false)
             +dropdown('2 спальни, 2 кровати...','room',1,'' , '2', '2', '0')
         +block-wrapper('expandable checkbox list', 'expand_more', 1)
             +expandable-checkbox-list('Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь')            
-
+    .wrapper
+        +block-wrapper('Rich Checkbox Buttons')
+            +rich-checkbox-buttons({
+                items:[
+                    {
+                    title:'Широкий коридор',
+                    subtitle:'Ширина коридоров в номере не менее 91 см.'
+                    },
+                    {
+                    title:'Помощник для инвалидов',
+                    subtitle:'На 1 этаже вас встретит специалист и проводит до номера.'
+                    }
+                    ]})
 
