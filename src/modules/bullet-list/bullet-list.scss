@@ -1,0 +1,27 @@
+.bullet-list {
+    &__list {
+        @include h3-text;
+        width: 260px;
+        list-style: none;
+        padding-left: 0;
+    }
+
+    &__item {
+        position: relative;
+        @include body-text;
+        text-transform: none;
+        padding-left: 20px;
+        margin-top: 10px;
+
+        &::before {
+            position: absolute;
+            left: 0px;
+            top: 7px;
+            content: "";
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            background: rgba(31, 32, 65, 0.25);
+        }
+    }
+}
