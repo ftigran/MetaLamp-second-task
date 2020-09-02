@@ -2,10 +2,15 @@
     @include h3-text;
     height: 44px;
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    border-radius: 22px;
+    border-radius: 100px;
     border: none;
     color: #fff;
-    padding: 14px 19px;
+    height: 100%;
+    width: 100%;
+    //padding: 14px 19px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     &:hover{
         opacity: 0.5;
     }

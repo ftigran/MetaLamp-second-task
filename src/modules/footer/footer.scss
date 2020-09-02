@@ -1,9 +1,8 @@
-.logo {}
-
-.container {}
+$padding-list: 10px;
 
 .footer {
     background: #FFFFFF;
+
     &_flex {
         display: flex;
         flex-direction: column;
@@ -17,19 +16,21 @@
         justify-content: space-between;
         max-width: 1160px;
         width: 80%;
-        margin: 100px 140px 101px 140px
+        margin: 100px 0px 101px 0px
     }
 
-    &__info {}
-
-    &__logo {}
+    &__info {
+        padding-right: $padding-list;
+    }
 
     &__text {
         max-width: 260px;
         margin-top: 10px;
     }
 
-    &__nav {}
+    &__nav {
+        padding-right: $padding-list;
+    }
 
     &__list {
         margin-top: 4px;
@@ -45,25 +46,30 @@
         text-transform: none;
         font-weight: normal;
         color: $dark-shade75;
-        &_for-subscribe{
-            width: 260px;
-margin-top: 18px;
-line-height: 24px;
+
+        &_for-subscribe {
+            margin-top: 18px;
+            line-height: 24px;
         }
     }
-&__subscribe-wrapper {
-    width: 260px;
-    margin-top: 23px;
-}
+
+    &__subscribe-wrapper {
+        margin-top: 23px;
+    }
+
     &__link {
         line-height: 17px;
         text-decoration: none;
         color: $dark-shade50;
     }
 
-    &__about-us {}
+    &__about-us {
+        padding-right: $padding-list;
+    }
 
-    &__help {}
+    &__help {
+        padding-right: $padding-list;
+    }
 
     &__subscribe {
         width: 260px;
@@ -80,10 +86,10 @@ line-height: 24px;
         justify-content: space-between;
         max-width: 1160px;
         width: 80%;
-padding-top: 23px;
-padding-bottom: 13px;
-        &-text {
-        }
+        padding-top: 23px;
+        padding-bottom: 13px;
+
+        &-text {}
     }
 
     &__socials {

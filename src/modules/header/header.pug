@@ -1,0 +1,30 @@
+mixin header(login)
+    header.header
+        .header__container
+            +logo
+            .header__menu
+                nav.header__nav
+                    ul.header__list
+                        li.header__item
+                            a.header__link.header__link_selected(href="empty") О нас
+                        li.header__item
+                            a.header__link(href="empty") Услуги
+                                span.header__expansion-ico expand_more
+                        li.header__item
+                            a.header__link(href="empty") Вакансии
+                        li.header__item
+                            a.header__link(href="empty") Новости
+                        li.header__item
+                            a.header__link(href="empty") Соглашения
+                                span.header__expansion-ico expand_more
+                if login
+                    span.header__user-line
+                    a.header__link.header__link_user=login
+                else
+                    a.header__link.header__link_login-button(href="empty")
+                        +button-border('войти')
+                    a.header__link.header__link_enter-button(href="empty")
+                        +button-fill('зарегистрироваться')
+                    
+    
+    if login
