@@ -22,7 +22,8 @@ const common = merge([{
         entry: {
             'index': PATHS.source + '/pages/index/index.js',
             'form-elements': PATHS.source + '/pages/form-elements/form-elements.js',
-            'colors-and-type': PATHS.source + '/pages/colors-and-type/colors-and-type.js'
+            'colors-and-type': PATHS.source + '/pages/colors-and-type/colors-and-type.js',
+            'headers-and-footers': PATHS.source + '/pages/headers-and-footers/headers-and-footers.js',            
         },
         output: {
             path: PATHS.build,
@@ -48,6 +49,11 @@ const common = merge([{
                 filename: 'form-elements.html',
                 chunks: ['form-elements', 'common'],
                 template: PATHS.source + '/pages/form-elements/form-elements.pug'
+            }),
+            new HtmlWebpackPlugin({
+                filename: 'headers-and-footers.html',
+                chunks: ['headers-and-footers', 'common'],
+                template: PATHS.source + '/pages/headers-and-footers/headers-and-footers.pug'
             }),
             new MiniCssExtractPlugin({
                 filename: '[name].css',
