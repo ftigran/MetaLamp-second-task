@@ -46,6 +46,7 @@
     "webpack-merge": "^5.1.2"
   },
   "dependencies": {
+    "air-datepicker": "^2.2.3",
     "webpack-dev-server": "^3.11.0"
   }
 }
