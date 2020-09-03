@@ -1,1 +1,27 @@
 mixin registration
+    .registration
+        .registration__container
+            h1.registration__title Регистрация аккаунта
+            .registration__wrapper-input
+                +text-field('Имя')
+            .registration__wrapper-input
+                +text-field('Фамилия')
+            .registration__wrapper-input.registration__wrapper-input-radio
+                +radio-buttons()
+            .registration__wrapper
+                h3.registration__subtitles дата рождения
+                .registration__wrapper-inner
+                    +date-dropdown('ДД.ММ.ГГГГ')
+            .registration__wrapper
+                h3.registration__subtitles данные для входа в сервис
+                .registration__wrapper-inner
+                    +text-field('Email', 'email')
+                .registration__wrapper-input
+                    +text-field('Пароль', 'password')
+                .registration__wrapper-toggle
+                    +toggle('Получать спецпредложения')
+            .registration__wrapper-button
+                +button-arrow('перейти к оплате')
+            .registration__enter Уже есть аккаунт на Toxin
+                .registration__enter-button
+                    +button-border('войти')
