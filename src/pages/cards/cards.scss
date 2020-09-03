@@ -1,8 +1,18 @@
 @import '../../template/template.scss';
 
-body{
+body {
     background: #E5E5E5;
 }
-.container{
+
+.container {
     padding: 72px 140px 140px 62px;
+    display:  flex;
+}
+.col{
+min-width: 460px;
+flex-shrink: 0;
+
+}
+.wrapper {
+    margin: 40px;
 }

@@ -1,0 +1,35 @@
+mixin reservation(number, extra,price, start, end, humans) 
+    .reservation
+        .reservation__container
+            .reservation__header
+                h1.reservation__room=number
+                    span.reservation__room-extra=extra
+                .reservation__price=price
+                    span.reservation__price-subtitle в сутки
+            .reservation__date
+                .reservation__wrapper
+                    h3.reservation__subtitles прибытие
+                    +date-dropdown(start)
+                .reservation__wrapper 
+                    h3.reservation__subtitles выезд
+                    +date-dropdown(end)
+            .reservation__wrapper
+                h3.reservation__subtitles гости
+                +date-dropdown(humans, 'room')
+            ul.reservation__details
+                li.reservation__item
+                    p.reservation__item-name 9 990₽ х 4 суток
+                    span.reservation__cost 39 960₽
+                li.reservation__item
+                    p.reservation__item-name Сбор за услуги: скидка 2 179₽
+                    span.reservation__details-info i
+                    span.reservation__cost 0₽
+                li.reservation__item
+                    p.reservation__item-name Сбор за дополнительные услуги
+                    span.reservation__details-info i
+                    span.reservation__cost 300₽
+            h2.reservation__total-label Итого
+                span.reservation__total-line
+                span.reservation__total-cost 38 081₽
+            .reservation__button
+                    +button-arrow('забронировать')

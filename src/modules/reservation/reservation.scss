@@ -1,0 +1,126 @@
+.reservation {
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    max-width: 380px;
+    min-width: 320px;
+
+    &__container {
+        margin: 39px auto 29px auto;
+        max-width: 320px;
+
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    &__room {
+
+        margin-top: 0;
+
+        &::before {
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 17px;
+            content: "№ ";
+            margin-right: 3px;
+        }
+    }
+
+    &__room-extra {
+        margin-left: 5px;
+        @include h3-text;
+        color: $purple;
+    }
+
+    &__price {
+        margin-top: 7px;
+        font-weight: bold;
+        color: $dark-shade50;
+    }
+
+    &__price-subtitle {
+        font-size: 12px;
+        margin-left: 5px;
+        font-weight: normal;
+    }
+
+    &__date {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    &__wrapper {
+        min-width: 150px;
+    }
+
+    &__subtitles {
+        margin-top: 4px;
+        margin-bottom: 5px;
+    }
+
+    &__details {
+        list-style: none;
+        padding: 0;
+        margin-top: 19px;
+    }
+
+    &__item {
+        line-height: 18px;
+        margin-top: 16px;
+
+        &-name {
+            display: inline-block;
+            width: 214px;
+        }
+    }
+
+    &__cost {
+        float: right;
+    }
+
+    &__details-info {
+        border: 1px solid $dark-shade25;
+        border-radius: 10px;
+        width: 20px;
+        height: 20px;
+        vertical-align: top;
+        display: inline-block;
+        text-align: center;
+        line-height: 18px;
+        color: $dark-shade25;
+        box-sizing: border-box;
+        margin-left: 5px;
+    }
+
+    &__total-label {
+        margin-left: 1px;
+        margin-top: 29px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__total-line {
+        flex-grow: 1;
+        content: "";
+        width: 1px;
+        border-bottom: 1px dashed $dark-shade25;
+        margin-bottom: 6px;
+    }
+
+    &__total-cost {
+        font-weight: bold;
+        line-height: 22px;
+        margin-right: 2px;
+    }
+
+    &__button {
+        margin-top: 19px;
+    }
+}
