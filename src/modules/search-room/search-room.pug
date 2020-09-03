@@ -1,0 +1,18 @@
+mixin search-room(s='')
+    .search-room
+        .search-room__container
+            h1.search-room__title Найдём номера под ваши пожелания
+            .search-room__wrapper-date
+                .search-room__wrapper
+                    h3.search-room__subtitles прибытие
+                    +date-dropdown('ДД.ММ.ГГГГ')
+                .search-room__wrapper 
+                    h3.search-room__subtitles выезд
+                    +date-dropdown('ДД.ММ.ГГГГ')
+            .search-room__wrapper
+                h3.search-room__subtitles гости
+                +date-dropdown('Сколько гостей', 'room')
+            .search-room__wrapper-button
+                +button-arrow('подобрать номер')
+
+            
