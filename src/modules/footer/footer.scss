@@ -1,26 +1,21 @@
-$padding-list: 10px;
 
 .footer {
     background: #FFFFFF;
 
-    &_flex {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
     box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
 
     &__container {
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-column-gap: 40px;
         max-width: 1160px;
         width: 80%;
-        margin: 100px 0px 101px 0px
+        margin: 0 auto 101px auto;
+        padding-top: 100px;
     }
 
     &__info {
-        padding-right: $padding-list;
+        grid-column: span 3;
     }
 
     &__text {
@@ -29,7 +24,7 @@ $padding-list: 10px;
     }
 
     &__nav {
-        padding-right: $padding-list;
+        grid-column: span 2;
     }
 
     &__list {
@@ -64,15 +59,16 @@ $padding-list: 10px;
     }
 
     &__about-us {
-        padding-right: $padding-list;
+        grid-column: span 2;
     }
 
     &__help {
-        padding-right: $padding-list;
+        grid-column: span 2;
     }
 
     &__subscribe {
-        width: 260px;
+        grid-column: span 3;
+        //width: 260px;
     }
 
     &__line {
@@ -85,6 +81,7 @@ $padding-list: 10px;
         display: flex;
         justify-content: space-between;
         max-width: 1160px;
+        margin: auto;
         width: 80%;
         padding-top: 23px;
         padding-bottom: 13px;

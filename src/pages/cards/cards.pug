@@ -1,6 +1,14 @@
 include ../../template/template
-<link href="../../node_modules/air-datepicker/dist/css/datepicker.min.css" rel="stylesheet" type="text/css">
-<script src="../../node_modules/air-datepicker/dist/js/datepicker.min.js"></script>
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Cards
+        +calendar-scripts
+    body
+
+
 +logo(1)
 .container
     .col
@@ -15,5 +23,5 @@ include ../../template/template
             +enter
     .col
         .wrapper
-            +calendar
+            +calendar(1)
         

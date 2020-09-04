@@ -1,9 +1,17 @@
-mixin calendar
+mixin calendar(isopen)
+    .calendar.datepicker-here(data-clearButton="true" data-range="true")
+    input(type="text"
+            class="datepicker-here"
+            data-multiple-dates="2"
+            data-multiple-dates-separator=" "
+            data-position='left top'
+            data-range="true"
+            data-clearButton="true"
+            )
 
-        .calendar
-            <div class="datepicker-here"></div>
-                input(type="text"
-                    class="datepicker-here"
-                    data-multiple-dates="3"
-                    data-multiple-dates-separator=", "
-                    data-position='right top')
+
+mixin calendar-scripts
+    //<link href="../../node_modules/air-datepicker/dist/css/datepicker.min.css" rel="stylesheet" type="text/css">
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    //<script> src="./calendar.js"></script>
+    <script src="../../node_modules/air-datepicker/dist/js/datepicker.min.js"></script>
