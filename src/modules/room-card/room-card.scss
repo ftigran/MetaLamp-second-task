@@ -1,14 +1,19 @@
 .room-card {
 background-color: #fff;
+box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+border-radius: 4px;
 width: 270px;
 height: 257px;
+&__slider{
+    margin-bottom: 20px;
+}
     &__container {
         display: flex;
         justify-content: space-between;
         margin: 0 20px;
     }
     &__separator{
-        margin: 0 20px;
+        margin: 8px 20px;
         border:none;
         border-top: 1px solid rgba(31, 32, 65, 0.1);
         
@@ -28,7 +33,8 @@ height: 257px;
         color: $purple;
     }
 
-    &__price {        margin-top: 7px;
+    &__price {        margin-top: 2px;
+        margin-right: -3px;
         font-weight: bold;
         color: $dark-shade50;
     }
@@ -38,10 +44,16 @@ height: 257px;
         margin-left: 5px;
         font-weight: normal;
     }
-    &__reviews {
+    &__rate{
+        margin-top: 1px;
+    }
+    &__reviews {        font-weight: bold;
+
     }
 
     &__reviews-subtitle {
+        font-weight: normal;
+margin-left: 4px;
     }
 }
 .slider {
