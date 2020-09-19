@@ -1,0 +1,12 @@
+mixin slider()
+    .slider
+        +slider-image('../src/img/rooms/room-1.png')
+        +slider-image('../src/img/rooms/room-2.png')
+        +slider-image('../src/img/rooms/room-3.png')
+        +slider-image('../src/img/rooms/room-4.png')
+
+mixin slider-image(template='')
+    .slider__item
+            img(
+                data-lazy=template
+                alt="Фото комнаты")

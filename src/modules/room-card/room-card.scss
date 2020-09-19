@@ -1,0 +1,86 @@
+.room-card {
+background-color: #fff;
+width: 270px;
+height: 257px;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 20px;
+    }
+    &__separator{
+        margin: 0 20px;
+        border:none;
+        border-top: 1px solid rgba(31, 32, 65, 0.1);
+        
+    }
+    &__number {    @include h2-text;
+            &::before {
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 17px;
+        content: "№ ";
+        margin-right: 3px;
+    }
+    }
+
+    &__extra {        margin-left: 5px;
+        @include h3-text;
+        color: $purple;
+    }
+
+    &__price {        margin-top: 7px;
+        font-weight: bold;
+        color: $dark-shade50;
+    }
+
+    &__price-subtitle {
+        font-size: 12px;
+        margin-left: 5px;
+        font-weight: normal;
+    }
+    &__reviews {
+    }
+
+    &__reviews-subtitle {
+    }
+}
+.slider {
+
+    &__item {
+    }
+}
+.slick-initialized {
+}
+.slick-slider {
+}
+.slick-dotted {
+}
+.slick-prev {
+}
+.slick-arrow {
+}
+.slick-list {
+}
+.draggable {
+}
+.slick-track {
+}
+.slick-slide {
+}
+.slick-cloned {
+}
+.slick-loading {
+}
+.slick-current {
+}
+.slick-active {
+}
+.slick-next {
+}
+.slick-dots {
+}
+.rate-button {
+
+    &__items {
+    }
+}

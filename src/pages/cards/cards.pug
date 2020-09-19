@@ -5,7 +5,7 @@ html(lang="ru")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Cards
-        +calendar-scripts
+        //+calendar-scripts
     body
 
 
@@ -24,4 +24,9 @@ html(lang="ru")
     .col
         .wrapper
             +calendar(1)
-        
+        .wrapper
+            +room-card('888', '9990', 5, 145, 'люкс')
+            //+slider
+script(src="../../node_modules/jquery/dist/jquery.min.js")
+script(src="../src/modules/slider/slick.min.js")
+script $(document).ready(function () {$('.slider').slick({dots: true, waitForAnimate: false, nextArrow:'<button type="button" class="slick-next">keyboard_arrow_right</button>', prevArrow:'<button type="button" class="slick-prev">keyboard_arrow_left</button>'});})
