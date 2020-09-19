@@ -5,4 +5,30 @@ $dark-shade25: rgba(31, 32, 65, 0.25);
 $dark-shade5: rgba(31, 32, 65, 0.05);
 $purple: #bc9cff;
 $green: #6fcf97;
-$purple-gradient: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+$purple-gradient: linear-gradient(180deg, $purple 0%, #8ba4f9 100%);
+$green-gradient: linear-gradient(180deg, $green 0%, #66d2ea 100%);
+@mixin gradient($color: "purple", $opacity: 1) {
+  $color1: red;
+  $color2: red;
+  $gradient: red;
+  @if $color== "purple" {
+    $gradient: linear-gradient(
+      180deg,
+      rgba(188, 156, 255, $opacity) 0%,
+      rgba(139, 164, 249, $opacity) 100%
+    );
+  } @else if $color== "green" {
+    $gradient: linear-gradient(
+      180deg,
+      rgba(111, 207, 151, $opacity) 0%,
+      rgba(102, 210, 234, $opacity) 100%
+    );
+  }
+  background: $gradient;
+  //linear-gradient(180deg, $color1 0%, $color2 100%);
+  /*@if $property=='background'{
+        background: $gradient;
+    } @else if $property=='background'{
+        background: $gradient;
+    }*/
+}
