@@ -1,89 +1,186 @@
 .header {
+  position: fixed;
+  top: 0;
+  background: #fff;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  height: 70px;
+  width: 100%;
+  &__container {
+    margin: auto;
+    padding: 0 20px 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 8px;
+    //width: 80%;
+    max-width: 1160px;
+  }
 
-    background: #fff;
-    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
-height: 70px;
-    &__container {
-        margin: auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-top: 15px;
-        padding-bottom: 8px;
-        width: 80%;
-        max-width: 1160px;
-    }
+  &__nav {
+  }
 
-    &__nav {}
+  &__list {
+    display: flex;
+    list-style: none;
 
-    &__list {
-        display: flex;
-        list-style: none;
+    margin: 0px;
+    padding-top: 9px;
+  }
 
-        margin: 0px;
-        padding-top: 9px;
-    }
+  &__item {
+    margin-left: 1px;
+  }
 
-    &__item {
-        margin-left: 1px;
-    }
+  &__menu {
+    display: flex;
+  }
 
-    &__menu {
-        display: flex;
-    }
-
-&__user-line{
+  &__user-line {
     margin-left: 20px;
     width: 1px;
     height: 30px;
     background: rgba(31, 32, 65, 0.1);
+  }
+  &__link {
+    margin-left: 20px;
+    display: flex;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 17px;
+
+    &_selected {
+      font-weight: bold;
+    }
+    &_user {
+      padding-top: 10px;
+      height: 30px;
+    }
+    &_login-button {
+      width: 87px;
+      height: 34px;
+      padding-bottom: 7px;
+    }
+
+    &_enter-button {
+      width: 196px;
+      height: 34px;
+      padding-bottom: 7px;
+    }
+  }
+
+  &__expansion-ico {
+    @include material-font;
+    font-size: 24px;
+    line-height: 17px;
+    padding-top: 1px;
+  }
+  &__burger {
+    margin-right: 20px;
+  }
+  &__user,
+  &__guest,
+  &__burger {
+    cursor: pointer;
+    display: none;
+  }
+  &__user,
+  &__guest {
+    @include text("material");
+    font-size: 34px;
+    line-height: 34px;
+  }
 }
-    &__link {
-        margin-left: 20px;
+@media (max-width: 985px) {
+  .header {
+    &__link_login-button,
+    &__link_enter-button {
+      display: none;
+    }
+    &__guest {
+      display: block;
+    }
+  }
+}
+@media (max-width: 910px) {
+  .header {
+    &__user-line,
+    &__link_user {
+      display: none;
+    }
+    &__user {
+      display: block;
+    }
+  }
+}
+@media (max-width: 696px) {
+  body.lock {
+    overflow: hidden;
+  }
+  .header {
+    &__nav {
+      position: fixed;
+      right: -85%;
+      width: 85%;
+      height: 100%;
+      top: 70px;
+      opacity: 0;
+    }
+    &__nav_active {
+      opacity: 1;
+      transition: right .3s;
+      right: 0;
+      @include gradient;
+      & .header__list {
         display: flex;
-        text-decoration: none;
-        font-size: 14px;
-        line-height: 17px;
-
-        &_selected {
-            font-weight: bold;
-        }
-&_user{
-    padding-top: 10px;
-    height: 30px;
-
-}
-        &_login-button {
-            width: 87px;
-            height: 34px;
-            padding-bottom: 7px;
-        }
-
-        &_enter-button {
-            width: 196px;
-            height: 34px;
-            padding-bottom: 7px;
-        }
-    }
-
-    &__expansion-ico {
-        @include material-font;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-right: 20px;
+      }
+      & .header__link {
         font-size: 24px;
-        line-height: 17px;
-        padding-top: 1px;
+        line-height: 30px;
+        margin: 20px;
+      }
     }
+    &__burger {
+      display: block;
+      position: relative;
+      margin-top: 3px;
+      height: 28px;
+      width: 32px;
+      &::before,
+      &::after,
+      &-line {
+        position: absolute;
+        content: "";
+        background-color: $dark-shade75;
+        width: 100%;
+        height: 4px;
+        transition: transform 0.3s ease-out;
+      }
+      &::after {
+        bottom: 0;
+      }
+      &-line {
+        bottom: 12px;
+      }
+      &_active {
+        &::before {
+          transform: translateY(12px) rotate(-45deg);
+        }
+        &::after {
+          transform: translateY(-12px) rotate(45deg);
+        }
+        & .header__burger-line {
+          width: 15%;
+          height: 100%;
+          position: fixed;
+          top: 70px;
+          left: 0;
+          background-color: transparent;
+        }
+      }
+    }
+  }
 }
-
-.logo {
-
-    &__ico {}
-
-    &__text {}
-}
-
-.button-border {
-
-    &__button {}
-}
-
-.button-fill {}
