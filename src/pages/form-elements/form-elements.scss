@@ -1,53 +1,64 @@
-@import '../../template/template.scss';
+@import "../../template/template.scss";
 
 body {
-    margin: 30px;
+  margin: 30px;
 }
 
 .container {
-    margin-left: 111px;
-    margin-right: 136px;
+  margin-left: 111px;
+  margin-right: 136px;
 
-    margin-top: 62px;
-    display: flex;
-    justify-content: space-between;
+  margin-top: 62px;
+  display: flex;
+  justify-content: space-between;
 }
-.wrapper{
-
-    max-width: 320px;
-    &-inline-block{
-        display: inline-block
-    }
+.wrapper {
+  max-width: 320px;
+  &-inline-block {
+    display: inline-block;
+  }
 }
 .block-wrapper {
-    margin-bottom: 18px;
+  margin-bottom: 18px;
 
-    &__text {
-        text-transform: uppercase;
-    }
+  &__text {
+    text-transform: uppercase;
+  }
 
-    &__title {
-        display: inline-block;
-        margin-top: 4px;
-        margin-bottom: 5px;
-    }
+  &__title {
+    display: inline-block;
+    margin-top: 4px;
+    margin-bottom: 5px;
+  }
 
-    &__subtitle {
-        float: right;
-        font-size: 12px;
-        line-height: 15px;
-        margin-right: 1px;
-        &_expandable{
- @include material-font;
-            font-size: 24px;
-            line-height: 24px;
-        text-transform: none;
-        margin-right: 10px;
+  &__subtitle {
+    float: right;
+    font-size: 12px;
+    line-height: 15px;
+    margin-right: 1px;
+    &_expandable {
+      @include material-font;
+      font-size: 24px;
+      line-height: 24px;
+      text-transform: none;
+      margin-right: 10px;
     }
-    }
+  }
 
-    &__block {}
+  &__block {
+  }
 }
-.button_hovered{
-    background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
+.wrapper__button {
+    display: inline-block;
+    margin-right:20px;
+    margin-bottom: 30px;
+  width: 99px;
+  height: 44px;
+}
+.button_hovered {
+  background: linear-gradient(
+    180deg,
+    rgba(188, 156, 255, 0.5) 0%,
+    rgba(139, 164, 249, 0.5) 100%
+  );
 }

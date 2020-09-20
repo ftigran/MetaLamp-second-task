@@ -10,110 +10,122 @@ mixin block-wrapper(title, subtitle, isexpandable=false)
               span.block-wrapper__subtitle.block-wrapper__subtitle_expandable=subtitle  
         .block-wrapper__block
             block
-
-+logo(true)
-.container
-    .wrapper
-        +block-wrapper('Text Field', 'Default')
-            +text-field('Email', 'email')
-        +block-wrapper('Text Field', 'Hover / Focus')
-            +text-field('This is pretty awesome')
-        +block-wrapper('Dropdown', 'Default')
-            +dropdown('Сколько гостей')
-        +block-wrapper('masked text field', 'Default')
-            +text-field('ДД.ММ.ГГГГ')
-        div(style="display: flex; width: 320px; justify-content: space-between; margin-top: 36px;")
-            +block-wrapper('date Dropdown')
-                +date-dropdown('ДД.ММ.ГГГГ')
-            +block-wrapper('date Dropdown')
-                +date-dropdown('19.08.2019')
-        +block-wrapper('filter date dropdown')
-            +filter-date-dropdown('19 авг - 23 авг')
-        +block-wrapper('subscription text field')
-            +subscription-text-field('Email')
-    .wrapper
-        +block-wrapper('Checkbox Buttons')
-            +checkbox-buttons('Можно курить', 'Можно с питомцами', 'Можно пригласить гостей (до 10 человек)')
-        +block-wrapper('radio Buttons')
-            +radio-buttons
-        +block-wrapper('Toggle')
-            +toggle('Получать спецпредложения', 1)
-            +toggle('Получать спецпредложения')
-        +block-wrapper('like button')
-            .wrapper-inline-block
-                +like-button(2)
-            .wrapper-inline-block
-                +like-button(12,1)
-        +block-wrapper('rate button')
-            .wrapper-inline-block
-                +rate-button(4)
-            .wrapper-inline-block
-                +rate-button(5)
-    .wrapper
-        +block-wrapper('Range Slider', '5 000₽ - 10 000₽')
-            +range-slider
-        +block-wrapper('buttons')
-            div
-                +button-fill('click me')
-                +button-fill('click me', ' button_hovered')
-            div
-                +button-border('click me')
-                +button-border('click me', ' button_hovered')
-            +button('click me')
-            +button('click me', 1)
-            div
-                +button-arrow('перейти к оплате')
-        +block-wrapper('pagination')
-            +pagination()
-.container
-    .wrapper
-        +block-wrapper('Dropdown', 'Default')
-            +dropdown('2 спальни, 2 кровати...')
-        +block-wrapper('Dropdown', 'expanded')
-            +dropdown('2 спальни, 2 кровати...','room',1,'' , '2', '2', '0')
-        +block-wrapper('expandable checkbox list', 'expand_more', 1)
-            +expandable-checkbox-list('Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь')            
-    .wrapper
-        +block-wrapper('Rich Checkbox Buttons')
-            +rich-checkbox-buttons({
-                items:[
-                    {
-                    title:'Широкий коридор',
-                    subtitle:'Ширина коридоров в номере не менее 91 см.'
-                    },
-                    {
-                    title:'Помощник для инвалидов',
-                    subtitle:'На 1 этаже вас встретит специалист и проводит до номера.'
-                    }
-                    ]})
-    .wrapper
-        +block-wrapper('bullet list')
-            +bullet-list(
-                'Нельзя с питомцами', 
-                'Без вечеринок и мероприятий', 
-                'Время прибытия — после 13:00, а выезд до 12:00'
-                )
-.container
-    .wrapper
-        +block-wrapper()
-            +features-list({
-                items:[
-                    {
-                    title:'Комфорт',
-                    subtitle:'Шумопоглощающие стены',
-                    ico: 'insert_emoticon'
-                    },
-                    {
-                    title: 'Удобство',
-                    subtitle: 'Окно в каждой из спален',
-                    ico: 'location_city'
-                    }
-                    ]})
-    .comment
-        +review(
-            'Мурад Сарафанов',
-            '5 дней назад',
-            12,
-            'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
-        '../src/img/avatar-1.jpg',
-        1)
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Form elements
+    body
+        +logo(true)
+        .container
+            .wrapper
+                +block-wrapper('Text Field', 'Default')
+                    +text-field('Email', 'email')
+                +block-wrapper('Text Field', 'Hover / Focus')
+                    +text-field('This is pretty awesome')
+                +block-wrapper('Dropdown', 'Default')
+                    +dropdown('Сколько гостей')
+                +block-wrapper('masked text field', 'Default')
+                    +text-field('ДД.ММ.ГГГГ')
+                div(style="display: flex; width: 320px; justify-content: space-between; margin-top: 36px;")
+                    +block-wrapper('date Dropdown')
+                        +date-dropdown('ДД.ММ.ГГГГ')
+                    +block-wrapper('date Dropdown')
+                        +date-dropdown('19.08.2019')
+                +block-wrapper('filter date dropdown')
+                    +filter-date-dropdown('19 авг - 23 авг')
+                +block-wrapper('subscription text field')
+                    +subscription-text-field('Email')
+            .wrapper
+                +block-wrapper('Checkbox Buttons')
+                    +checkbox-buttons('Можно курить', 'Можно с питомцами', 'Можно пригласить гостей (до 10 человек)')
+                +block-wrapper('radio Buttons')
+                    +radio-buttons
+                +block-wrapper('Toggle')
+                    +toggle('Получать спецпредложения', 1)
+                    +toggle('Получать спецпредложения')
+                +block-wrapper('like button')
+                    .wrapper-inline-block
+                        +like-button(2)
+                    .wrapper-inline-block
+                        +like-button(12,1)
+                +block-wrapper('rate button')
+                    .wrapper-inline-block
+                        +rate-button(4)
+                    .wrapper-inline-block
+                        +rate-button(5)
+            .wrapper
+                +block-wrapper('Range Slider', '5 000₽ - 10 000₽')
+                    +range-slider
+                +block-wrapper('buttons')
+                    div
+                        .wrapper__button
+                            +button-fill('click me')
+                        .wrapper__button
+                            +button-fill('click me', ' button_hovered')
+                    div
+                        .wrapper__button
+                            +button-border('click me')
+                        .wrapper__button
+                            +button-border('click me', ' button_hovered')
+                    .wrapper__button
+                        +button('click me')
+                    .wrapper__button
+                        +button('click me', 1)
+                    div
+                        +button-arrow('перейти к оплате')
+                +block-wrapper('pagination')
+                    +pagination()
+        .container
+            .wrapper
+                +block-wrapper('Dropdown', 'Default')
+                    +dropdown('2 спальни, 2 кровати...')
+                +block-wrapper('Dropdown', 'expanded')
+                    +dropdown('2 спальни, 2 кровати...','room',1,'' , '2', '2', '0')
+                +block-wrapper('expandable checkbox list', 'expand_more', 1)
+                    +expandable-checkbox-list('Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь')            
+            .wrapper
+                +block-wrapper('Rich Checkbox Buttons')
+                    +rich-checkbox-buttons({
+                        items:[
+                            {
+                            title:'Широкий коридор',
+                            subtitle:'Ширина коридоров в номере не менее 91 см.'
+                            },
+                            {
+                            title:'Помощник для инвалидов',
+                            subtitle:'На 1 этаже вас встретит специалист и проводит до номера.'
+                            }
+                            ]})
+            .wrapper
+                +block-wrapper('bullet list')
+                    +bullet-list(
+                        'Нельзя с питомцами', 
+                        'Без вечеринок и мероприятий', 
+                        'Время прибытия — после 13:00, а выезд до 12:00'
+                        )
+        .container
+            .wrapper
+                +block-wrapper()
+                    +features-list({
+                        items:[
+                            {
+                            title:'Комфорт',
+                            subtitle:'Шумопоглощающие стены',
+                            ico: 'insert_emoticon'
+                            },
+                            {
+                            title: 'Удобство',
+                            subtitle: 'Окно в каждой из спален',
+                            ico: 'location_city'
+                            }
+                            ]})
+            .comment
+                +review(
+                    'Мурад Сарафанов',
+                    '5 дней назад',
+                    12,
+                    'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
+                '../src/img/avatar-1.jpg',
+                1)

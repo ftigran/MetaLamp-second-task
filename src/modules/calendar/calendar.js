@@ -1,6 +1,7 @@
-import 'air-datepicker'
-import '../../../node_modules/air-datepicker/dist/css/datepicker.min.css'
-import './calendar.scss'
+import '../../../node_modules/air-datepicker/dist/css/datepicker.min.css';
+import './calendar.scss';
+
+import 'air-datepicker';
 
 $(document).ready(function () {
     $(".calendar").datepicker({

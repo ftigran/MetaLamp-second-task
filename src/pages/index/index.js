@@ -1,3 +1,6 @@
 import './index.scss'
+
 import * as $ from 'jquery'
-import '../../modules/header/header'
+import '../../modules/range-slider/range-slider'
+
+
