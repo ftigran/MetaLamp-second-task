@@ -1,120 +1,151 @@
-
 .footer {
-    background: #FFFFFF;
+  background: #ffffff;
 
-    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
 
-    &__container {
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        grid-column-gap: 40px;
-        max-width: 1160px;
-        width: 80%;
-        margin: 0 auto 101px auto;
-        padding-top: 100px;
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 40px;
+    max-width: 1160px;
+    width: 80%;
+    margin: 0 auto 101px auto;
+    padding-top: 100px;
+  }
+
+  &__info {
+    grid-column: span 3;
+  }
+
+  &__text {
+    max-width: 260px;
+    margin-top: 10px;
+  }
+
+  &__nav {
+    grid-column: span 2;
+  }
+
+  &__list {
+    margin-top: 4px;
+    @include h3-text;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  &__item {
+    font-size: 14px;
+    margin-top: 21px;
+    text-transform: none;
+    font-weight: normal;
+    color: $dark-shade75;
+
+    &_for-subscribe {
+      margin-top: 18px;
+      line-height: 24px;
+    }
+  }
+
+  &__subscribe-wrapper {
+    margin-top: 23px;
+  }
+
+  &__link {
+    line-height: 17px;
+    text-decoration: none;
+    color: $dark-shade50;
+  }
+
+  &__about-us {
+    grid-column: span 2;
+  }
+
+  &__help {
+    grid-column: span 2;
+  }
+
+  &__subscribe {
+    grid-column: span 3;
+    //width: 260px;
+  }
+
+  &__line {
+    width: 100%;
+    box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);
+    margin: 0;
+  }
+
+  &__copyright {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1160px;
+    margin: auto;
+    width: 80%;
+    padding-top: 23px;
+    padding-bottom: 13px;
+
+    &-text {
+    }
+  }
+
+  &__socials {
+    &-list {
+      list-style: none;
+      font-size: 0;
     }
 
-    &__info {
-        grid-column: span 3;
+    &-item {
+      display: inline-block;
+      margin-left: 20px;
     }
 
-    &__text {
-        max-width: 260px;
-        margin-top: 10px;
+    &-link {
     }
 
-    &__nav {
-        grid-column: span 2;
+    &-ico {
+      text-align: center;
+      width: 24px;
+      background: $purple-gradient;
+      color: transparent;
+      font-size: 24px;
+      background-clip: text;
     }
-
-    &__list {
-        margin-top: 4px;
-        @include h3-text;
-        list-style: none;
-        padding: 0;
-        margin-bottom: 0;
-    }
-
-    &__item {
-        font-size: 14px;
-        margin-top: 21px;
-        text-transform: none;
-        font-weight: normal;
-        color: $dark-shade75;
-
-        &_for-subscribe {
-            margin-top: 18px;
-            line-height: 24px;
-        }
-    }
-
-    &__subscribe-wrapper {
-        margin-top: 23px;
-    }
-
-    &__link {
-        line-height: 17px;
-        text-decoration: none;
-        color: $dark-shade50;
-    }
-
-    &__about-us {
-        grid-column: span 2;
-    }
-
-    &__help {
-        grid-column: span 2;
-    }
-
-    &__subscribe {
-        grid-column: span 3;
-        //width: 260px;
-    }
-
+  }
+}
+@media (max-width: 750px) {
+  .footer {
+    &__nav,
+    &__about-us,
+    &__help,
+    &__subscribe,
+    &__text,
     &__line {
-        width: 100%;
-        box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);
-        margin: 0;
+      display: none;
     }
-
+    &__container {
+      display: block;
+      padding-top: 120px;
+      margin-bottom: 0;
+    }
+    &__info {
+      width: 114px;
+      margin: auto;
+    }
     &__copyright {
-        display: flex;
-        justify-content: space-between;
-        max-width: 1160px;
-        margin: auto;
-        width: 80%;
-        padding-top: 23px;
-        padding-bottom: 13px;
-
-        &-text {}
+      flex-direction: column;
+      align-items: center;
+      padding-top: 10px;
+      padding-bottom: 111px;
+      &-text {
+        padding-right: 9px;
+      }
     }
-
-    &__socials {
-
-
-        &-list {
-            list-style: none;
-            font-size: 0;
-        }
-
-        &-item {
-            display: inline-block;
-            margin-left: 20px;
-
-
-        }
-
-        &-link {}
-
-        &-ico {
-
-            text-align: center;
-            width: 24px;
-            background: $purple-gradient;
-            color: transparent;
-            font-size: 24px;
-            background-clip: text;
-        }
-
+    &__socials-list {
+      padding: 22px 30px 0 0;
     }
+    &__socials-ico {
+      vertical-align: center;
+    }
+  }
 }

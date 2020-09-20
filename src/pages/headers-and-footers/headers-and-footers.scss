@@ -10,3 +10,41 @@ body{
 header.header{
     position: relative;
 }
+.wrapper__mobile{
+    max-width: 768px;
+    margin: auto;
+    &  .footer {
+        &__nav,
+        &__about-us,
+        &__help,
+        &__subscribe,
+        &__text,
+        &__line {
+          display: none;
+        }
+        &__container {
+          display: block;
+          padding-top: 120px;
+          margin-bottom: 0;
+        }
+        &__info {
+          width: 114px;
+          margin: auto;
+        }
+        &__copyright {
+          flex-direction: column;
+          align-items: center;
+          padding-top: 10px;
+          padding-bottom: 111px;
+          &-text {
+            padding-right: 9px;
+          }
+        }
+        &__socials-list {
+          padding: 22px 30px 0 0;
+        }
+        &__socials-ico {
+          vertical-align: center;
+        }
+      }
+}
