@@ -1,24 +1,28 @@
 mixin dropdown(text='', type='room', expanded=0, partclass='', ...numbs)
-    if expanded==true
+    //if expanded==true
         div(class = "dropdown dropdown_expanded dropdown_for-room" + partclass)=text
             span.dropdown__expand expand_more
-    else
+    //else
         div(class = "dropdown " + partclass)=text
             span.dropdown__expand expand_more
     if type='room'
         -var names=['спальни', 'кровати', 'ванные комнаты']
+        -var ids = ['bedroom', 'bed', 'bathroom']
     else if type='guest'
         -var names=['взрослые', 'дети', 'младенцы']
     -i=0
-    .dropdown__menu
-        each numb in numbs
-            .dropdown__item
-                span.dropdown__name=names[i]
-                span.dropdown__controls
-                    button.dropdown__button -
-                    span.dropdown__quantity=numb
-                    button.dropdown__button +
-            -i++
+    .dropdown
+        .dropdown__text=text
+        //span.dropdown__expand expand_more
+        .dropdown__menu
+            each numb in numbs
+                .dropdown__item(data-item=ids[i])
+                    span.dropdown__name=names[i]
+                    span.dropdown__controls
+                        button.dropdown__button#button-minus -
+                        span.dropdown__quantity=numb
+                        button.dropdown__button#button-plus +
+                -i++
         
 
 

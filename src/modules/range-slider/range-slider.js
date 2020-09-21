@@ -10,6 +10,7 @@ $("#demo_2").ionRangeSlider({
     max: 15400,
     from: 5000,
     to: 10000,
+    step: 100,
     hide_min_max: true,
     hide_from_to: true,
     grid: false,

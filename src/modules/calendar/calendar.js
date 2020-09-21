@@ -1,4 +1,4 @@
-import '../../../node_modules/air-datepicker/dist/css/datepicker.min.css';
+import 'air-datepicker/dist/css/datepicker.min.css';
 import './calendar.scss';
 
 import 'air-datepicker';
