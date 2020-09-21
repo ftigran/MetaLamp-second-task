@@ -2,44 +2,49 @@
 
 .dropdown {
   max-width: 320px;
+  height: 44px;
   position: relative;
   @include border;
   box-sizing: border-box;
+  background: #ffffff;
+
+  &::after {
+    content: "expand_more";
+    position: absolute;
+    top: 8px;
+    right: 9px;
+    @include material-font;
+    line-height: 26px;
+    font-size: 24px;
+    text-align: center;
+    color: $dark-shade50;
+  }
   &_expanded {
     border-color: $dark-shade50;
-    border-radius: 2px 2px 0 0;}
-
-&__text{
-    height: 44px;
-    padding-left: 13px;
-    padding-top: 8px;
-    color: $dark-shade75;
-    background: #ffffff;
+    border-radius: 2px 2px 0 0;
     &::after {
-        content: 'expand_more';
-      float: right;
-      @include material-font;
-      width: 42px;
-      line-height: 26px;
-      font-size: 24px;
-      text-align: center;
-      color: $dark-shade50;
+      content: "expand_less";
     }
-    &_expanded::after {
-            content: 'expand_less';
-        }
-}
+  }
+  &__text {
+    padding: 8px 44px 0 14px;
+    color: $dark-shade75;
+    text-overflow: clip;
+    line-height: 24px;
+    height: 26px;
+    width: 206px;
+  }
 
   &_for-room {
     width: 266px;
   }
   &__menu {
-      position: absolute;
-      top: 43px;
-      left: 0;
-      width: 100%;
-      background-color: #fff;
-      z-index: 1;
+    position: absolute;
+    top: 43px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1;
     @include border;
     border-top: none;
     border-color: $dark-shade50;
@@ -70,8 +75,8 @@
     color: $dark-shade50;
     background-color: #fff;
     outline: none;
-    &:disabled{
-        opacity: 0.5;
+    &:disabled {
+      opacity: 0.5;
     }
   }
 
