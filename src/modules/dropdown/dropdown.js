@@ -35,11 +35,12 @@ let DropdownText;
 function dropdownInitialize(dropdown){
   type = $(dropdown).find('.dropdown__item').data('type');
   DropdownText=$(dropdown).find('.dropdown__text');
-
+let sum=0;
   if  (type=='room'){
     $(dropdown).find('.dropdown__item').each(function(i,elem){
       item = $(this).data('item');
       val=$(this).find('.dropdown__quantity').text();
+      sum+=val;
       dropdownMinusButtonDisable(this);
     dropdownTextSemantica(val, itemsRooms, droptownRoomsText);
     calcDropdownText(DropdownText)
@@ -48,10 +49,13 @@ function dropdownInitialize(dropdown){
     item = $(dropdown).find('.dropdown__item').data('item');
     $(dropdown).find('.dropdown__item').each(function(i,elem){
       val=$(this).find('.dropdown__quantity').text();
+      sum+=val;
       totalGuests+=+$(this).find('.dropdown__quantity').text();
       dropdownMinusButtonDisable(this);
     })
-
+    if (sum==0){
+      $(dropdown).find('.dropdown__clear').addClass('dropdown__clear_disabled')
+    }
     let arr=[];
 
     dropdownTextSemantica(totalGuests, guests, arr);
@@ -93,6 +97,7 @@ $('.dropdown__button').click(function (event) {
   if (this.textContent=='+'){
     val++;
     isCalc=true;
+    $(parent).parent('.dropdown__item').parent('.dropdown__menu').find('.dropdown__clear').removeClass('dropdown__clear_disabled')
     if (val==maxVal) {
       $(this).attr('disabled', true)
     } else if(val==minVal+1) {

@@ -82,9 +82,10 @@
       opacity: 0.5;
     }
     &s {
-      display: flex;
-      justify-content: space-between;
-      margin: 17px 1px 6px 7px;
+      //display: flex;
+      //justify-content: space-between;
+      height: 20px;
+      margin: 14px 1px 6px 7px;
       
     }
   }
@@ -99,5 +100,14 @@
     justify-content: space-between;
     align-items: center;
     width: 92px;
+  }
+  &__aply{
+    float: right;
+  }
+  &__clear{
+    float: left;
+    &_disabled{
+      display: none;
+    }
   }
 }

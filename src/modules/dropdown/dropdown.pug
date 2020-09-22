@@ -39,8 +39,10 @@ mixin dropdown(type='room',  isExpanded=false, isControls=false, ...numbs)
                 -i++
             if isControls
                 .dropdown__buttons
-                    +button('очистить', 1)
-                    +button('применить')
+                    .dropdown__clear
+                        +button('очистить', 1)
+                    .dropdown__aply
+                        +button('применить')
         
 
 
