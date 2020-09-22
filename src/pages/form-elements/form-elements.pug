@@ -92,8 +92,9 @@ html(lang="ru")
                     +dropdown('2 спальни, 2 кровати...','guest', 1,1, '2', '1', '0')
         .container
             .wrapper
-                //+block-wrapper('expandable checkbox list', 'expand_more', 1)
-                +expandable-checkbox-list('expandable checkbox list',1, 'Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь')
+                +expandable-checkbox-list('expandable checkbox list', 0, 'Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь')
+                +expandable-checkbox-list('expandable checkbox list', 1, 'Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь')
+            .wrapper
                 +block-wrapper('Rich Checkbox Buttons')
                     +rich-checkbox-buttons({
                         items:[

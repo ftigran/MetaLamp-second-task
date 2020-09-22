@@ -4,8 +4,8 @@ mixin rich-checkbox-buttons(props={})
         -const {items}=props
         each item in items
             -const {title, subtitle}=item
-            -nr = nr + 1
+            -nr += + 1
             li.rich-checkbox-buttons__item
                 input(type="checkbox", class="rich-checkbox-buttons__checkbox" id="rich-checkbox" + nr)
-                label(class="rich-checkbox-buttons__title" for="rich-checkbox" + nr)=title
+                label(class="rich-checkbox-buttons__label" for="rich-checkbox" + nr)=title
                     p.rich-checkbox-buttons__subtitle=subtitle

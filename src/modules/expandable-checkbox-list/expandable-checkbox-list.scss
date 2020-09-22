@@ -4,8 +4,8 @@
   &__title {
     text-transform: uppercase;
     @include text("h3");
-    max-width: 266px;
-    min-height: 44px;
+    width: 266px;
+    height: 44px;
     padding-right: 5px;
     display: flex;
     justify-content: space-between;
@@ -19,7 +19,7 @@
       float: right;
       font-weight: normal;
       color: $dark-shade50;
-      padding-right: 5px;
+      padding-right: 10px;
       padding-top: 1px;
 
     }
