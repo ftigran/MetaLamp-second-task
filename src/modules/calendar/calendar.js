@@ -6,7 +6,11 @@ import 'air-datepicker';
 $(document).ready(function () {
     $(".calendar").datepicker({
         clearButton: true,
-        
+        multipleDates: "2",
+        multipleDatesSeparator: " ",
+        position:'left top',
+        range:"true",
+        clearButton:"true",
         todayButton: 'dasue',
         prevHtml: 'arrow_back',
         nextHtml: 'arrow_forward',
@@ -27,3 +31,5 @@ $(document).ready(function () {
     timeFormat: 'hh:ii',
     firstDay: 1
 };
+
+

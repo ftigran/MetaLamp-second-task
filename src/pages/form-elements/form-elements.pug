@@ -25,7 +25,7 @@ html(lang="ru")
                 +block-wrapper('Text Field', 'Hover / Focus')
                     +text-field('This is pretty awesome')
                 +block-wrapper('Dropdown', 'Default')
-                    +dropdown('Сколько гостей')
+                    +dropdown()
                 +block-wrapper('masked text field', 'Default')
                     +text-field('ДД.ММ.ГГГГ')
                 div(style="display: flex; width: 320px; justify-content: space-between; margin-top: 36px;")
@@ -80,16 +80,16 @@ html(lang="ru")
         .container
             .wrapper
                 +block-wrapper('Dropdown', 'Default')
-                    +dropdown('2 спальни, 2 кровати...')
+                    +dropdown()
                 +block-wrapper('Dropdown', 'expanded')
-                    +dropdown('2 спальни, 2 кровати...','room',1,0, '2', '2', '0')
+                    +dropdown('room',1,0, '2', '2', '0')
                 .wrapper__gap
             .wrapper
                 +block-wrapper('Dropdown', 'expanded')
-                    +dropdown('2 спальни, 2 кровати...','guest', 1,1, '0', '0', '0')
+                    +dropdown('guest', 1,1, '0', '0', '0')
             .wrapper
                 +block-wrapper('Dropdown', 'expanded')
-                    +dropdown('2 спальни, 2 кровати...','guest', 1,1, '2', '1', '0')
+                    +dropdown('guest', 1,1, '2', '1', '0')
         .container
             .wrapper
                 +expandable-checkbox-list('expandable checkbox list', 0, 'Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь')

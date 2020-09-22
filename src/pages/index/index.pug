@@ -19,14 +19,13 @@ html(lang="ru")
                     a(href="cards.html") cards
             
         +range-slider
-        +rich-checkbox-buttons({
-                        items:[
-                            {
-                            title:'Широкий коридор',
-                            subtitle:'Ширина коридоров в номере не менее 91 см.'
-                            },
-                            {
-                            title:'Помощник для инвалидов',
-                            subtitle:'На 1 этаже вас встретит специалист и проводит до номера.'
-                            }
-                            ]})
+        .dsadas
+            .dasdas
+                .saddasdsa 
+                    +search-room()
+        .wrapper(style='margin-left: 500px;')
+            +calendar(1)
+        .wrapper
+            +room-card('../src/img/rooms/room-1.png', 888, '9 990', 5, 145, 'люкс')
+        .wrapper
+            +room-card('../src/img/rooms/room-2.png', 840, '9 990', 4, 65)

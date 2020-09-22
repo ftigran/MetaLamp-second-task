@@ -15,7 +15,7 @@ mixin reservation(number, extra,price, start, end, humans)
                     +date-dropdown(end)
             .reservation__wrapper
                 h3.reservation__subtitles гости
-                +date-dropdown(humans, 'room')
+                +dropdown('guest', 0,1, '0', '0', '0')
             ul.reservation__details
                 li.reservation__item
                     p.reservation__item-name 9 990₽ х 4 суток
