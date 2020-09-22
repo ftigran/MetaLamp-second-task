@@ -1,4 +1,55 @@
 @import "../../template/template.scss";
+.calendar {
+  position: relative;
+  &__controls {
+    display: grid;
+    grid-template-columns: 150px 150px;
+    column-gap: 20px;
+    grid-template-rows: 20px 44px;
+    grid-auto-flow: column;
+  }
+  &__button {
+    position: absolute;
+    right: 15px;
+    bottom: 16px;
+  }
+  &__input {
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    box-sizing: border-box;
+    border-radius: 4px;
+    width: 150px;
+    padding-left: 14px;
+    height: 44px;
+    @include text("body");
+    outline: none;
+    cursor: pointer;
+  }
+  &__label {
+    cursor: pointer;
+    @include text("h3");
+    &::before {
+      content: "expand_more";
+      @include text("material");
+      text-transform: none;
+      position: absolute;
+      top: 36px;
+      padding-left: 115px;
+      font-size: 24px;
+      color: $dark-shade50;
+    }
+  }
+
+  &__calendar {
+    display: none;
+    position: absolute;
+    top: 70px;
+    z-index: 1;
+    &_showed {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+}
 .datepicker {
   width: 320px;
   border: 1px solid $dark-shade25;
@@ -69,18 +120,21 @@
     }
   }
   &--button {
+    display: inline-block;
+    float: left;
     @include text("h3");
     color: $dark-shade50;
-
-    flex-grow: 0;
-    &:first-child {
-      color: $purple;
+    cursor: pointer;
+    margin-left: 15px;
+    margin-top: 16px;
+    &:hover {
+      opacity: 0.5;
+      background-color: transparent;
     }
     &s {
       border: none;
-      flex-direction: row-reverse;
-      justify-content: space-between;
-      padding: 12px 20px 10px 19px;
+      padding-bottom: 2px;
+
     }
   }
 }

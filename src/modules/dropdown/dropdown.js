@@ -174,7 +174,7 @@ n++;
 
 //Клик по кнопке "Применить"
 $('.button_purple').click(function (event) {
-  const dropdown=$(this).parent('.dropdown__buttons').parent('.dropdown__menu').parent('.dropdown')
+  const dropdown=$(this).parent('.dropdown__aplpy').parent('.dropdown__buttons').parent('.dropdown__menu').parent('.dropdown')
   
   $(dropdown).find('.dropdown__menu').toggleClass('dropdown__menu_showed');
   $(dropdown).toggleClass('dropdown_expanded');
@@ -182,7 +182,7 @@ $('.button_purple').click(function (event) {
 
 //клик по кнопке "Очистить"
 $('.button_gray').click(function (event) {
-  const dropdown=$(this).parent('.dropdown__buttons').parent('.dropdown__menu').parent('.dropdown')
+  const dropdown=$(this).parent('.dropdown__clear').parent('.dropdown__buttons').parent('.dropdown__menu').parent('.dropdown')
   const dropdownItem = $(dropdown).find('.dropdown__item');
     let isGuest = $(dropdownItem).data('type')=='guest';
     if (isGuest)  totalGuests=0;

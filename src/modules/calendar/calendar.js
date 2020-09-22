@@ -3,15 +3,18 @@ import './calendar.scss';
 
 import 'air-datepicker';
 
+$('.calendar__input').click(function(){
+    $(this).parent('.calendar__controls').parent('.calendar').find('.calendar__calendar').toggleClass('calendar__calendar_showed')
+})
+
 $(document).ready(function () {
-    $(".calendar").datepicker({
+    $(".calendar__calendar").datepicker({
         clearButton: true,
         multipleDates: "2",
         multipleDatesSeparator: " ",
-        position:'left top',
-        range:"true",
-        clearButton:"true",
-        todayButton: 'dasue',
+        position:'bottom left',
+        range:true,
+        clearButton:true,
         prevHtml: 'arrow_back',
         nextHtml: 'arrow_forward',
         navTitles: {
@@ -31,5 +34,3 @@ $(document).ready(function () {
     timeFormat: 'hh:ii',
     firstDay: 1
 };
-
-

@@ -1,5 +1,6 @@
 .button-arrow {
-    @include h3-text;
+    @include text('h3');
+    padding-left: 1px;
     position: relative;
     min-width: 320px;
     height: 44px;
