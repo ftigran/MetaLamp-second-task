@@ -1,0 +1,42 @@
+@import "../../template/template.scss";
+
+.expandable-checkbox-list {
+  &__title {
+    text-transform: uppercase;
+    @include text("h3");
+    max-width: 266px;
+    min-height: 44px;
+    padding-right: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &::after {
+      content: "expand_more";
+      @include text("material");
+      font-size: 24px;
+      line-height: 24px;
+      text-transform: none;
+      float: right;
+      font-weight: normal;
+      color: $dark-shade50;
+      padding-right: 5px;
+      padding-top: 1px;
+
+    }
+    &_expanded{
+        &::after {
+            content: "expand_less";
+        }
+    }
+  }
+
+  &__list {
+      transition: max-height 0.4s;
+      max-height:0px;
+      overflow:hidden;
+      &_show{
+        max-height: 500px;
+        overflow:inherit;
+      }
+  }
+}

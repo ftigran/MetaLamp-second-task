@@ -1,3 +1,10 @@
-mixin expandable-checkbox-list(...items)
-    +block-wrapper('expandable checkbox list', 'expand_less', 1)
-        +checkbox-buttons(...items)
+mixin expandable-checkbox-list(title, isExpanded, ...items)
+    -titleClass ='expandable-checkbox-list__title'
+    -listClass= 'expandable-checkbox-list__list'
+    if isExpanded
+        -titleClass+=' expandable-checkbox-list__title_expanded'
+        -listClass+= ' expandable-checkbox-list__list_show'
+    .expandable-checkbox-list
+        div(class=titleClass)=title
+        div(class=listClass)
+            +checkbox-buttons(...items)
