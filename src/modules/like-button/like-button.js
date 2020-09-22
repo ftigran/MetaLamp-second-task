@@ -1,8 +1,14 @@
+$('.like-button').click(function(){
+    const like = $(this).find('.like-button__text')
+    let likes = $(like).text();
+    console.log($(this).hasClass('like-button_liked'))
 
-likes = document.getElementsByClassName('like-button__label');
-console.log(likes);
-for (like in likes)
-{like.сlick = function() {
-    alert('das')
-        
-        }}
+    if ($(this).hasClass('like-button_liked')){
+        $(like).text(+likes-1)
+        $(this).removeClass('like-button_liked');
+    } else {
+        $(like).text(+likes+1)
+        $(this).addClass('like-button_liked');
+    }
+
+})

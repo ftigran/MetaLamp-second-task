@@ -1,82 +1,53 @@
 .like-button {
+    height: 20px;
+    min-width: 40px;
+    border-radius: 10px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    box-sizing: border-box;
+    &_liked {
+        color: $purple;
+        background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+        border: none;
+        padding: 1px;
+        & .like-button__text{
+            color: $purple;
+    
+            &::before {
 
-    &__wrapper {
-        display: inline-block;
-        height: 20px;
-        min-width: 40px;
-        border-radius: 10px;
-        border: 1px solid rgba(31, 32, 65, 0.25);
-        box-sizing: border-box;
-    }
-
-    &__like {
-        position: absolute;
-        z-index: -1;
-        opacity: 0;
-
-        &:checked+.like-button{
-            &__wrapper {
+                content: "favorite";
                 color: $purple;
-                background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-                border: none;
-                padding: 1px;
-                & .like-button__label {
-                    color: $purple;
-    
-                    &::before {
-    
-                        content: "favorite";
-                        color: $purple;
-                    }
-
-                }
             }
-
-
         }
-
-        &:hover+.like-button__label {
-            box-shadow: 0px 0px 3px 3px $purple;
-        }
-
-        &::after {}
+    }
+    &:hover {
+        box-shadow: 0px 0px 3px 3px $purple;
     }
 
-    &__label {
+    &__text {
         padding-right: 5px;
         transition: 0.25s ease-out, top 0s, left 0s;
         height: 18px;
         background-color: #ffffff;
         border-radius: 10px;
         display: flex;
-        padding-left: 21px;
+        padding-left: 19px;
         transition: 0.25s ease-out;
         justify-content: start;
-
         position: relative;
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: normal;
+        @include text('body');
         font-size: 10px;
         line-height: 12px;
-
         align-items: center;
         color: $dark-shade25;
 
         &::before {
             position: absolute;
             transition: 0.25s ease-out;
-            display: inline-block;
-            left: 1px;
-            width: 18px;
-            height: 18px;
+            left: 4px;
             content: "favorite_border";
-            font-family: "Material Icons";
-            font-style: normal;
-            font-weight: normal;
+            @include text('material');
             font-size: 10px;
             line-height: 18px;
-            text-align: center;
             color: $dark-shade25;
         }
     }
