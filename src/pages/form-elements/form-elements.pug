@@ -82,12 +82,18 @@ html(lang="ru")
                 +block-wrapper('Dropdown', 'Default')
                     +dropdown('2 спальни, 2 кровати...')
                 +block-wrapper('Dropdown', 'expanded')
-                    +dropdown('2 спальни, 2 кровати...','room',0,1, '2', '2', '5')
-                +block-wrapper('Dropdown', 'expanded')
-                    +dropdown('2 спальни, 2 кровати...','guest', 1,1, '4', '0', '6')
-                +block-wrapper('expandable checkbox list', 'expand_more', 1)
-                    +expandable-checkbox-list('Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь')            
+                    +dropdown('2 спальни, 2 кровати...','room',1,0, '2', '2', '0')
+                .wrapper__gap
             .wrapper
+                +block-wrapper('Dropdown', 'expanded')
+                    +dropdown('2 спальни, 2 кровати...','guest', 1,1, '0', '0', '0')
+            .wrapper
+                +block-wrapper('Dropdown', 'expanded')
+                    +dropdown('2 спальни, 2 кровати...','guest', 1,1, '2', '1', '0')
+        .container
+            .wrapper
+                +block-wrapper('expandable checkbox list', 'expand_more', 1)
+                    +expandable-checkbox-list('Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь')
                 +block-wrapper('Rich Checkbox Buttons')
                     +rich-checkbox-buttons({
                         items:[

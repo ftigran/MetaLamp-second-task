@@ -21,7 +21,7 @@ mixin dropdown(text='', type='room',  isExpanded=false, isControls=false, ...num
     -i=0
 
     div(class=ddClass)
-        .dropdown__text text
+        .dropdown__text Задать параметры
         div(class=ddMenuClass)
             each numb in numbs
                 .dropdown__item(data-item=ids[i] data-type=type)
@@ -38,7 +38,7 @@ mixin dropdown(text='', type='room',  isExpanded=false, isControls=false, ...num
                            button.dropdown__button#button-plus +
                 -i++
             if isControls
-                .dropdown__controls
+                .dropdown__buttons
                     +button('очистить', 1)
                     +button('применить')
         

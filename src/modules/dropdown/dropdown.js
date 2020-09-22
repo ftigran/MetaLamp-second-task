@@ -1,4 +1,5 @@
 import './dropdown.scss';
+import { each } from 'jquery';
 
 let maxVal=6;
 let minVal=0;
@@ -39,22 +40,33 @@ function dropdownInitialize(dropdown){
     $(dropdown).find('.dropdown__item').each(function(i,elem){
       item = $(this).data('item');
       val=$(this).find('.dropdown__quantity').text();
+      dropdownMinusButtonDisable(this);
     dropdownTextSemantica(val, itemsRooms, droptownRoomsText);
     calcDropdownText(DropdownText)
     })
   } else if (type=='guest'){
     item = $(dropdown).find('.dropdown__item').data('item');
-    $(dropdown).find('.dropdown__quantity').each(function(i,elem){
-      totalGuests+=+$(this).text();
+    $(dropdown).find('.dropdown__item').each(function(i,elem){
+      val=$(this).find('.dropdown__quantity').text();
+      totalGuests+=+$(this).find('.dropdown__quantity').text();
+      dropdownMinusButtonDisable(this);
     })
 
     let arr=[];
 
     dropdownTextSemantica(totalGuests, guests, arr);
-    setDropdownText(DropdownText, arr[0])
+    setDropdownText(DropdownText, arr)
   }
 }
 
+function dropdownMinusButtonDisable(elem){
+  if (val==minVal) {
+    $(elem).find('#button-minus').attr('disabled', true)
+  }
+  if (val!=maxVal) {
+    $(elem).find('#button-plus').removeAttr('disabled');
+  }
+}
 //Присвоение значений текста в дропдаунах прии загрузке страницы
 $('.dropdown').each(function(i,elem){
   dropdownInitialize(this)
@@ -82,14 +94,14 @@ $('.dropdown__button').click(function (event) {
     val++;
     isCalc=true;
     if (val==maxVal) {
-      $(this).attr('disabled', 'true')
+      $(this).attr('disabled', true)
     } else if(val==minVal+1) {
       $(parent).find('#button-minus').removeAttr('disabled') 
     }
   }else{
     val--;
     if (val==minVal) {
-      $(this).attr('disabled', 'true')
+      $(this).attr('disabled', true)
     } else if (val==maxVal-1) {
       $(parent).find('#button-plus').removeAttr('disabled') 
     }
@@ -157,7 +169,7 @@ n++;
 
 //Клик по кнопке "Применить"
 $('.button_purple').click(function (event) {
-  const dropdown=$(this).parent('.dropdown__controls').parent('.dropdown__menu').parent('.dropdown')
+  const dropdown=$(this).parent('.dropdown__buttons').parent('.dropdown__menu').parent('.dropdown')
   
   $(dropdown).find('.dropdown__menu').toggleClass('dropdown__menu_showed');
   $(dropdown).toggleClass('dropdown_expanded');
@@ -165,11 +177,12 @@ $('.button_purple').click(function (event) {
 
 //клик по кнопке "Очистить"
 $('.button_gray').click(function (event) {
-  const dropdown=$(this).parent('.dropdown__controls').parent('.dropdown__menu').parent('.dropdown')
-  const dropdownItem = $(dropdown).find('.dropdown__item').each(function(){
-    let isGuest = $(this).data('type')=='guest';
+  const dropdown=$(this).parent('.dropdown__buttons').parent('.dropdown__menu').parent('.dropdown')
+  const dropdownItem = $(dropdown).find('.dropdown__item');
+    let isGuest = $(dropdownItem).data('type')=='guest';
     if (isGuest)  totalGuests=0;
-    $(this).find('.dropdown__quantity').text(minVal);
-  })
+    $(dropdownItem).find('.dropdown__quantity').each(function(){
+      $(this).text(minVal);
+          })
   dropdownInitialize(dropdown);
 }) 

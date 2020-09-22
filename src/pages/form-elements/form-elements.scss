@@ -17,6 +17,9 @@ body {
   &-inline-block {
     display: inline-block;
   }
+  &__gap{
+    margin-top: 100px;
+  }
 }
 .block-wrapper {
   margin-bottom: 18px;
