@@ -18,7 +18,6 @@ $(document).ready(function () {
             days: '<h2>MM yyyy</h2>'
         },
         onSelect: function(formattedDate, date, inst){
-            $.updateDate(formattedDate);
             $.dates=formattedDate;
         }
     });

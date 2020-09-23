@@ -1,9 +1,11 @@
+-var ddId=0
 mixin date-dropdown(isOpen, textIn='ДД.ММ.ГГГГ', textOut='ДД.ММ.ГГГГ')
     .date-dropdown
         .date-dropdown__controls
-            label.date-dropdown__label(for="date-dropdown-in") Прибытие
-            input.date-dropdown__input#date-dropdown-in(type="text" readonly placeholder=textIn)
-            label.date-dropdown__label(for="date-dropdown-out") Выезд
-            input.date-dropdown__input#date-dropdown-out(type="text" readonly placeholder=textOut)
+            label.date-dropdown__label(for="date-dropdown-in"+ddId) Прибытие
+            input.date-dropdown__input.in(type="text" readonly placeholder=textIn id="date-dropdown-in"+ddId)
+            label.date-dropdown__label(for="date-dropdown-out"+ddId) Выезд
+            input.date-dropdown__input.out(type="text" readonly placeholder=textOut id="date-dropdown-out"+ddId)
+            -ddId++
         .date-dropdown__calendar
             +calendar(isOpen)
