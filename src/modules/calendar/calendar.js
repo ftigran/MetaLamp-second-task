@@ -3,6 +3,7 @@ import './calendar.scss';
 
 import 'air-datepicker';
 
+
 $(document).ready(function () {
     $(".calendar").datepicker({
         clearButton: true,
@@ -15,6 +16,10 @@ $(document).ready(function () {
         nextHtml: 'arrow_forward',
         navTitles: {
             days: '<h2>MM yyyy</h2>'
+        },
+        onSelect: function(formattedDate, date, inst){
+            $.updateDate(formattedDate);
+            $.dates=formattedDate;
         }
     });
   });

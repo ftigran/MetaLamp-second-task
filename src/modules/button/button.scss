@@ -1,15 +1,16 @@
 .button {
-    @include h3-text;
-    text-transform: uppercase;
-    color: #BC9CFF;
-    border: none;
-    background: none;
+  @include h3-text;
+  text-transform: uppercase;
+  color: #bc9cff;
+  border: none;
+  background: none;
+  cursor: pointer;
 
-    &:hover {
-        opacity: 0.5;
-    }
+  &:hover {
+    opacity: 0.5;
+  }
 
-    &_gray {
-        color: $dark-shade50
-    }
+  &_gray {
+    color: $dark-shade50;
+  }
 }

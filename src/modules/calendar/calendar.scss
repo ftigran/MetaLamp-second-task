@@ -1,6 +1,7 @@
 @import "../../template/template.scss";
 .calendar {
   max-height: 0;
+  max-width: 320px;
   position: relative;
   z-index: 1;
   transition: max-height 0.3s;
@@ -10,8 +11,14 @@
   }
   &__button {
     position: absolute;
-    right: 15px;
-    bottom: 16px;
+    padding-left: 14px;
+    padding-top: 8px;
+    box-sizing: border-box;
+    right: 4px;
+    bottom: 2px;
+    width: 120px;
+    height: 46px;
+    cursor: pointer;
   }
 }
 .datepicker {
@@ -86,19 +93,21 @@
   &--button {
     display: inline-block;
     float: left;
+    height: 46px;
     @include text("h3");
     color: $dark-shade50;
     cursor: pointer;
-    margin-left: 15px;
-    margin-top: 16px;
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-top: 16px;
     &:hover {
       opacity: 0.5;
       background-color: transparent;
     }
     &s {
-      border: none;
-      padding-bottom: 2px;
+      width: 120px;
 
+      border: none;
     }
   }
 }

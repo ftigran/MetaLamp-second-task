@@ -174,7 +174,7 @@ n++;
 
 //Клик по кнопке "Применить"
 $('.button_purple').click(function (event) {
-  const dropdown=$(this).parent('.dropdown__aplpy').parent('.dropdown__buttons').parent('.dropdown__menu').parent('.dropdown')
+  const dropdown=$(this).parent('.dropdown__apply').parent('.dropdown__buttons').parent('.dropdown__menu').parent('.dropdown')
   
   $(dropdown).find('.dropdown__menu').toggleClass('dropdown__menu_showed');
   $(dropdown).toggleClass('dropdown_expanded');
