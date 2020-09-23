@@ -3,7 +3,7 @@ import './range-slider.scss'
 import 'ion-rangeslider/js/ion.rangeSlider';
 
 
-$("#demo_2").ionRangeSlider({
+$('.range-slider__input').ionRangeSlider({
     type: "double",
     grid: true,
     min: 500,
@@ -14,4 +14,7 @@ $("#demo_2").ionRangeSlider({
     hide_min_max: true,
     hide_from_to: true,
     grid: false,
+    onChange: function (data) {
+        $('.range-slider__value').text(data.from.toLocaleString('ru') + ' - ' + data.to.toLocaleString('ru') + '₽')
+    }
 });

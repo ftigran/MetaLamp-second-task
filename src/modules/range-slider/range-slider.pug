@@ -1,8 +1,14 @@
-mixin range-slider
+mixin range-slider(text, value)
     .range-slider
-        input(id="demo_2" type="text" name="" value="" class="range-slider__value" tabindex="-1" readonly="")
-
-    //span.range-slider__slider-zone
-            span.range-slider__slider-1
-            span.range-slider__slider-2
+        label.range-slider__label=text
+            span.range-slider__value=value
+            input(
+                type="text" 
+                name="" 
+                value="" 
+                class="range-slider__input" 
+                tabindex="-1" 
+                readonly
+                )
+        
             
