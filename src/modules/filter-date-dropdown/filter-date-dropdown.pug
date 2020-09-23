@@ -1,3 +1,6 @@
-mixin filter-date-dropdown(text='', partclass='' )
+mixin filter-date-dropdown(label='даты пребывания в отеле', text='', partclass='' )
     .filter-date-dropdown
-        +dropdown()
+        label.filter-date-dropdown__label(for="filter-date-dropdown")=label
+            input.filter-date-dropdown__input#filter-date-dropdown(type="text" readonly placeholder=text)
+        .filter-date-dropdown__calendar
+            +calendar(1)

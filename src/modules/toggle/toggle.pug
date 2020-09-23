@@ -1,3 +1,4 @@
+-let toggleid=0
 mixin toggle(text='', checked='')
     .toggle 
         if checked==true
@@ -5,7 +6,7 @@ mixin toggle(text='', checked='')
                 type="checkbox"
                 name="toggle"
                 class="toggle__toggle"
-                id="toggle"
+                id="toggle"+toggleid
                 checked
             )
         else
@@ -13,10 +14,11 @@ mixin toggle(text='', checked='')
                 type="checkbox"
                 name="toggle"
                 class="toggle__toggle"
-                id="toggle"
+                id="toggle"+toggleid
             )
         
         label(
             class="toggle__label"
-            for="toggle"
+            for="toggle"+toggleid
         )=text
+        -toggleid++
