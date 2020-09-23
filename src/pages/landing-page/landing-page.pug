@@ -1,0 +1,17 @@
+include ../../template/template
+
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Landing page
+    body
+        +header
+        main.landing-page
+            .landing-page__container
+                .landing-page__search-room
+                    +search-room()
+                .landing-page__description.description
+                    p.description__text Лучшие номера для вашей работы, отдыха и просто вдохновения
+        +footer

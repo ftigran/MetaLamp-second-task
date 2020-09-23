@@ -1,0 +1,48 @@
+body,
+html {
+  height: 100%;
+}
+
+.landing-page {
+  background: url("../../img/landing-background.jpg") no-repeat;
+  background-size: cover;
+  height: 100%;
+  //box-sizing: content-box;
+  &__container {
+    margin: 0 auto;
+    max-width: 1200px;
+    height: 100%;
+    //box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 20px auto auto 20px;
+    grid-template-rows: 140px 374px auto 48px 21px;
+  }
+  &__description {
+    grid-row: 4;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__search-room {
+    grid-row: 2;
+    grid-column: 2;
+  }
+}
+.description {
+  &__text {
+    max-width: 297px;
+    text-align: right;
+    padding-right: 14px;
+  }
+}
+@media (max-width: 400px) {
+  .landing-page__container {
+    grid-template-columns: 5px auto auto 5px;
+  }
+}
+@media (max-width: 340px) {
+  .landing-page__container {
+    grid-template-columns: auto auto auto auto;
+  }
+}

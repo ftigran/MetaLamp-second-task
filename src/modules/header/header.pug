@@ -1,4 +1,4 @@
-mixin header(login)
+mixin header(login, isSelected)
     header.header
         .header__container
             +logo
@@ -8,7 +8,10 @@ mixin header(login)
                 nav.header__nav
                     ul.header__list
                         li.header__item
-                            a.header__link.header__link_selected(href="empty") О нас
+                            if isSelected
+                                a.header__link.header__link_selected(href="empty") О нас
+                            else
+                                a.header__link(href="empty") О нас                            
                         li.header__item
                             a.header__link(href="empty") Услуги
                                 span.header__expansion-ico expand_more
