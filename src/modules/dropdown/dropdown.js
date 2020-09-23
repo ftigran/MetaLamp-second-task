@@ -140,11 +140,11 @@ function setDropdownText(elem, text){
 //сбор слов с разных параметров о один текст
 function calcDropdownText (elem){
   let text=''; 
-  for (let droptownRoomText of droptownRoomsText) {
-    if (droptownRoomText!='' && droptownRoomText!=droptownRoomsText[0]){
+  for (let i=0; i<droptownRoomsText.length; i++) {
+    if (droptownRoomsText[i]!='' && droptownRoomsText[i]!=droptownRoomsText[0]&&text!=''){
       text+=', ';
     };
-    text+=droptownRoomText;
+    text+=droptownRoomsText[i];
   }
   if (text=='') text=droptownRoomsDefaultText;
   setDropdownText(elem, text)
