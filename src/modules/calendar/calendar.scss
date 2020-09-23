@@ -1,12 +1,12 @@
 @import "../../template/template.scss";
 .calendar {
-  //max-width: 320px;
-  display: none;
+  max-height: 0;
   position: relative;
   z-index: 1;
+  transition: max-height 0.3s;
+  overflow: hidden;
   &_showed {
-    display: block;
-    //flex-direction: column-reverse;
+    max-height: 410px;
   }
   &__button {
     position: absolute;
