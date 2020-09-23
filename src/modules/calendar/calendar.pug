@@ -1,19 +1,10 @@
-mixin calendar(isopen, textIn='ДД.ММ.ГГГГ', textOut='ДД.ММ.ГГГГ')
-    
-
-    //.calendar.datepicker-here(data-clearButton="true" data-range="true")
-    .calendar
-        .calendar__controls
-            label.calendar__label(for="calendar-in") Прибытие
-            input.calendar__input#calendar-in(type="text" readonly placeholder=textIn)
-            label.calendar__label(for="calendar-out") Выезд
-            input.calendar__input#calendar-out(type="text" readonly placeholder=textOut)
-        if isopen
-            .calendar__calendar.calendar__calendar_showed
-                .calendar__button
-                    +button('Применить')
-        else
-            .calendar__calendar
-                .calendar__button
-                    +button('Применить')
+mixin calendar(isOpen)
+    if isOpen
+        .calendar.calendar_showed
+            .calendar__button
+                +button('Применить')
+    else
+        .calendar
+            .calendar__button
+                +button('Применить')
             

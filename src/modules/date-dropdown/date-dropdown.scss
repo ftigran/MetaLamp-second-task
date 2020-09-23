@@ -1,16 +1,41 @@
+@import "../../template/template.scss";
 .date-dropdown {
+  position: relative;
+  &__controls {
+    display: grid;
+    grid-template-columns: 150px 150px;
+    column-gap: 20px;
+    grid-template-rows: 20px 44px;
+    grid-auto-flow: column;
+  }
+  &__input {
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    box-sizing: border-box;
+    border-radius: 4px;
     width: 150px;
-    height: 44px;
-    @include border;
     padding-left: 14px;
-    padding-top: 9px;
-
-    &__expand {
-        float: right;
-        @include material-font;
-        width: 42px;
-        line-height: 26px;
-        font-size: 24px;
-        text-align: center;
+    height: 44px;
+    @include text("body");
+    outline: none;
+    cursor: pointer;
+  }
+  &__label {
+    cursor: pointer;
+    @include text("h3");
+    &::before {
+      content: "expand_more";
+      @include text("material");
+      text-transform: none;
+      position: absolute;
+      top: 36px;
+      padding-left: 115px;
+      font-size: 24px;
+      color: $dark-shade50;
     }
+  }
+
+  &__calendar {
+margin-top: 6px;
+position: absolute;
+  }
 }

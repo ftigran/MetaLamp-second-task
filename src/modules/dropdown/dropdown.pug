@@ -1,38 +1,60 @@
-mixin dropdown(type='room',  isExpanded=false, isControls=false, ...numbs)
-    -let maxVal=6;
-    -let minVal=0;
-    -let names, ids;
+//- Миксины 
+    dropdown
+    Пример вызова dropdown
+
+    +dropdown('room', false, false, [1, 2, 5])
+
+    Где 'room' модификатор type, 
+        возможные значения 'room' 'guest'
+        false - открыт ли dropdown по умолчанию
+        false - наличие кнопок "применить", "очистить"
+        [1, 2, 5] - массив значений по умолчанию для параметров dropdown
+
+mixin dropdown(type='room', isExpanded=false, isControls=false, vals=[0,0,0])
+    -let maxVal=6; //-максимальное значение параметра
+    -let minVal=0; //-минимальное значение параметра
+    -let names, ids; //- дата-атрибуты
+    -isExist
     -ddClass
     -ddMenuClass
+    //-Добавляет класс, если dropdown должен быть раскрыт по умолчанию
     if isExpanded
         -ddMenuClass='dropdown__menu dropdown__menu_showed'
         -ddClass='dropdown dropdown_expanded'
     else
         -ddMenuClass='dropdown__menu'
         -ddClass='dropdown'
+    //-Определение модификатора type, параметров внутри dropdown
     if type=='room'
         -ddClass+=' dropdown_for-room'
         - names=['спальни', 'кровати', 'ванные комнаты']
         - ids = ['bedroom', 'bed', 'bathroom']
+        -isExist=true
     else if type=='guest'
         -ddClass+=' dropdown_for-guest'
         - names=['взрослые', 'дети', 'младенцы']
         - ids = ['guest', 'guest', 'guest']
-    -i=0
+        -isExist=true
 
     div(class=ddClass)
         .dropdown__text Задать параметры
         div(class=ddMenuClass)
-            each numb in numbs
+            if isExist
+            -let i=0
+            each name in names
+                if vals[i]==underfined||vals[i]<0
+                    -vals[i]=minVal
+                else if vals[i]>maxVal
+                    -vals[i]=maxVal
                 .dropdown__item(data-item=ids[i] data-type=type)
-                    span.dropdown__name=names[i]
+                    span.dropdown__name=name
                     span.dropdown__controls
-                        if numb==minVal
+                        if vals[i]==minVal
                             button.dropdown__button#button-minus(disabled) -
                         else
                            button.dropdown__button#button-minus - 
-                        span.dropdown__quantity=numb
-                        if numb==maxVal
+                        span.dropdown__quantity=vals[i]
+                        if vals[i]==maxVal
                             button.dropdown__button#button-plus(disabled) +
                         else
                            button.dropdown__button#button-plus +
@@ -45,5 +67,3 @@ mixin dropdown(type='room',  isExpanded=false, isControls=false, ...numbs)
                         +button('применить')
         
 
-
-        

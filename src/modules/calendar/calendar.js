@@ -3,12 +3,8 @@ import './calendar.scss';
 
 import 'air-datepicker';
 
-$('.calendar__input').click(function(){
-    $(this).parent('.calendar__controls').parent('.calendar').find('.calendar__calendar').toggleClass('calendar__calendar_showed')
-})
-
 $(document).ready(function () {
-    $(".calendar__calendar").datepicker({
+    $(".calendar").datepicker({
         clearButton: true,
         multipleDates: "2",
         multipleDatesSeparator: " ",

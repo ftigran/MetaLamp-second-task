@@ -3,7 +3,7 @@ mixin search-room(isShow)
         .search-room__container
             h1.search-room__title Найдём номера под ваши пожелания
             .search-room__date
-                +calendar(isShow)
+                +date-dropdown(isShow)
             .search-room__guest
                 h3.search-room__subtitles гости
                 +dropdown('guest', 0, 1, 0,0,0)

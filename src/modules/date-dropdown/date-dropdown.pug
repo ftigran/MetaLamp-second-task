@@ -1,4 +1,9 @@
-mixin date-dropdown(text='', partclass='' )
-    +dropdown()
-    //(text,"date-dropdown  " + partclass)
-
+mixin date-dropdown(isOpen, textIn='ДД.ММ.ГГГГ', textOut='ДД.ММ.ГГГГ')
+    .date-dropdown
+        .date-dropdown__controls
+            label.date-dropdown__label(for="date-dropdown-in") Прибытие
+            input.date-dropdown__input#date-dropdown-in(type="text" readonly placeholder=textIn)
+            label.date-dropdown__label(for="date-dropdown-out") Выезд
+            input.date-dropdown__input#date-dropdown-out(type="text" readonly placeholder=textOut)
+        .date-dropdown__calendar
+            +calendar(isOpen)

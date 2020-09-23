@@ -9,10 +9,10 @@ mixin reservation(number, extra,price, start, end, humans)
             .reservation__date
                 .reservation__wrapper
                     h3.reservation__subtitles прибытие
-                    +date-dropdown(start)
+                    //+date-dropdown(start)
                 .reservation__wrapper 
                     h3.reservation__subtitles выезд
-                    +date-dropdown(end)
+                    //+date-dropdown(end)
             .reservation__wrapper
                 h3.reservation__subtitles гости
                 +dropdown('guest', 0,1, '0', '0', '0')
