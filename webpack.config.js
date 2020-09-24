@@ -26,7 +26,7 @@ const common = merge([{
             'headers-and-footers': PATHS.source + '/pages/headers-and-footers/headers-and-footers.js',            
             'cards': PATHS.source + '/pages/cards/cards.js',
             'landing-page': PATHS.source + '/pages/landing-page/landing-page.js',
-
+            'search-room': PATHS.source + '/pages/search-room/search-room.js',
         },
         output: {
             path: PATHS.build,
@@ -66,6 +66,10 @@ const common = merge([{
                 filename: 'landing-page.html',
                 chunks: ['landing-page', 'common'],
                 template: PATHS.source + '/pages/landing-page/landing-page.pug'
+            }),new HtmlWebpackPlugin({
+                filename: 'search-room.html',
+                chunks: ['search-room', 'common'],
+                template: PATHS.source + '/pages/search-room/search-room.pug'
             }),
             new MiniCssExtractPlugin({
                 filename: '[name].css',

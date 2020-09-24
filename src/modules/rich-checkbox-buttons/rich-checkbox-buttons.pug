@@ -1,4 +1,18 @@
 -let nr = 0
+
+//-
+    +rich-checkbox-buttons({
+                        items:[
+                            {
+                            title:'Широкий коридор',
+                            subtitle:'Ширина коридоров в номере не менее 91 см.'
+                            },
+                            {
+                            title:'Помощник для инвалидов',
+                            subtitle:'На 1 этаже вас встретит специалист и проводит до номера.'
+                            }
+                            ]})
+                            
 mixin rich-checkbox-buttons(props={})
     ul.rich-checkbox-buttons__list
         -const {items}=props

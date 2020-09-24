@@ -1,4 +1,13 @@
-mixin expandable-checkbox-list(title, isExpanded, ...items)
+//-+expandable-checkbox-list('дополнительные удобства', 0, [0,1,1,1],
+                    'Завтрак',
+                    'Письменный стол',
+                    'Стул для кормления',
+                    'Кроватка',
+                    'Шампунь',
+                    'Телевизор',
+                    'Шампунь')'
+
+mixin expandable-checkbox-list(title, isExpanded, vals, ...items)
     -titleClass ='expandable-checkbox-list__title'
     -listClass= 'expandable-checkbox-list__list'
     if isExpanded
@@ -7,4 +16,4 @@ mixin expandable-checkbox-list(title, isExpanded, ...items)
     .expandable-checkbox-list
         div(class=titleClass)=title
         div(class=listClass)
-            +checkbox-buttons(...items)
+            +checkbox-buttons(vals, ...items)

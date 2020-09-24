@@ -1,8 +1,17 @@
 -var ncheckbox = 0
-mixin checkbox-buttons(...items)
+
+//-
+    +checkbox-buttons([0,1,1], 'можно курить', 'Можно с питомцами', 'Можно пригласить гостей (до 10 человек)')
+
+mixin checkbox-buttons(values, ...items)
+    -let i=0
     ul.checkbox-buttons__list
         each item in items
             - ncheckbox = ncheckbox + 1
             li.checkbox-buttons__item
-                input(type="checkbox", class="checkbox-buttons__checkbox" id="checkbox"+ncheckbox)
+                if values[i]
+                    input(type="checkbox", class="checkbox-buttons__checkbox" id="checkbox"+ncheckbox checked)
+                else
+                    input(type="checkbox", class="checkbox-buttons__checkbox" id="checkbox"+ncheckbox)
+                -i++
                 label(class="checkbox-buttons__label" for="checkbox"+ncheckbox)=item
