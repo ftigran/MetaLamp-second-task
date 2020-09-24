@@ -1,6 +1,6 @@
 include ../../template/template
 
-mixin rooms-list(props, link=emptylink)
+mixin rooms-list(props, link='emptylink')
     li.rooms__item
         a.rooms__link(href=link)
             +room-card(props[0], props[1], props[2], props[3], props[4], props[5])
@@ -25,7 +25,7 @@ html(lang="ru")
                     +wrapper()
                         +filter-date-dropdown('даты пребывания в отеле', '19 авг - 23 авг')
                     +wrapper-text('гости')
-                        +dropdown('guest',0,0,[2,1,1])
+                        +dropdown('guest',0,1,[2,1,1])
                     +wrapper()
                         +range-slider('диапазон цены')
                         .filters__description Стоимость за сутки пребывания в номере
@@ -49,7 +49,7 @@ html(lang="ru")
                                     }
                                     ]})
                     +wrapper-text('удобства номера')
-                        +dropdown('room',0,0,[2,2,0])
+                        +dropdown('room',0,0,[2,2,1])
                     +wrapper
                         +expandable-checkbox-list('дополнительные удобства', 0, [0,1,1,1,0,0,0],
                             'Завтрак',
@@ -61,6 +61,8 @@ html(lang="ru")
                             'Шампунь')
                 .search-room__rooms.rooms
                     h1.rooms__title Номера, которые мы для вас подобрали
+                        .search-room__filters-ico
+                            span.search-room__filters-ico-line
                     ul.rooms__container
                         +rooms-list(['../src/img/rooms/room-1.jpg', 888, '9 990', 5, 145, 'люкс'])
                         +rooms-list(['../src/img/rooms/room-2.jpg', 840, '9 990', 4, 65])

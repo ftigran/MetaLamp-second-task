@@ -11,7 +11,7 @@
         [1, 2, 5] - массив значений по умолчанию для параметров dropdown
 
 mixin dropdown(type='room', isExpanded=false, isControls=false, vals=[0,0,0])
-    -let maxVal=6; //-максимальное значение параметра
+    -let maxVal=7; //-максимальное значение параметра
     -let minVal=0; //-минимальное значение параметра
     -let names, ids; //- дата-атрибуты
     -isExist
@@ -33,7 +33,7 @@ mixin dropdown(type='room', isExpanded=false, isControls=false, vals=[0,0,0])
     else if type=='guest'
         -ddClass+=' dropdown_for-guest'
         - names=['взрослые', 'дети', 'младенцы']
-        - ids = ['guest', 'guest', 'guest']
+        - ids = ['notbaby', 'notbaby', 'baby']
         -isExist=true
 
     div(class=ddClass)

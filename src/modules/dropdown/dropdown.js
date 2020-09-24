@@ -1,16 +1,23 @@
 import './dropdown.scss';
 import { each } from 'jquery';
 
-let maxVal=6;
-let minVal=0;
+const maxVal=7;
+const minVal=0;
 let droptownRoomsText=[];
-let droptownRoomsDefaultText='Удобства номера'
-let totalGuests=0;
-let guests= [{
-  item:'guest',
-  words:['Сколько гостей','гость','гостя','гостей'],
-}];
-let itemsRooms = [
+let droptownGuestsText=[];
+const droptownRoomsDefaultText='Удобства номера'
+let droptownGuestsDefaultText='Сколько гостей'
+let  totalNotbaby=0;
+const itemsGuests=[
+  {
+    item:'notbaby',
+    words:['','гость','гостя','гостей'],
+  },
+  {
+    item:'baby',
+    words:['','младенец','младенца','младенцев'],
+  }];
+const itemsRooms = [
       {
       item:'bedroom',
       words:['','спальня','спальни','спален'],
@@ -41,29 +48,33 @@ let sum=0;
       item = $(this).data('item');
       val=$(this).find('.dropdown__quantity').text();
       sum+=val;
-      dropdownMinusButtonDisable(this);
+      dropdownButtonDisable(this);
     dropdownTextSemantica(val, itemsRooms, droptownRoomsText);
-    calcDropdownText(DropdownText)
-    })
+  })
+    calcDropdownText(DropdownText, droptownRoomsText, droptownGuestsDefaultText)
+    
   } else if (type=='guest'){
-    item = $(dropdown).find('.dropdown__item').data('item');
     $(dropdown).find('.dropdown__item').each(function(i,elem){
+      item = $(this).data('item');
       val=$(this).find('.dropdown__quantity').text();
       sum+=val;
-      totalGuests+=+$(this).find('.dropdown__quantity').text();
-      dropdownMinusButtonDisable(this);
+      dropdownButtonDisable(this);
+      if ($(this).data('item')=='notbaby'){
+        totalNotbaby+=+val;
+        dropdownTextSemantica(totalNotbaby, itemsGuests, droptownGuestsText);
+      }else {
+        dropdownTextSemantica(val, itemsGuests, droptownGuestsText);
+      }
+      calcDropdownText(DropdownText, droptownGuestsText, droptownGuestsDefaultText)
+
     })
     if (sum==0){
       $(dropdown).find('.dropdown__clear').addClass('dropdown__clear_disabled')
     }
-    let arr=[];
-
-    dropdownTextSemantica(totalGuests, guests, arr);
-    setDropdownText(DropdownText, arr)
   }
 }
 
-function dropdownMinusButtonDisable(elem){
+function dropdownButtonDisable(elem){
   if (val==minVal) {
     $(elem).find('#button-minus').attr('disabled', true)
   }
@@ -89,15 +100,17 @@ $('.dropdown__button').click(function (event) {
 
   const parent = $(this).parent('.dropdown__controls');
   const value = $(parent).find('.dropdown__quantity');
+  const menu= $(parent).parent('.dropdown__item').parent('.dropdown__menu')
+  const clearButton = $(menu).find('.dropdown__clear')
   item = $(parent).parent('.dropdown__item').data('item');
   type = $(parent).parent('.dropdown__item').data('type')
   val = $(value).text();
   let isCalc=false;
-  
   if (this.textContent=='+'){
     val++;
     isCalc=true;
-    $(parent).parent('.dropdown__item').parent('.dropdown__menu').find('.dropdown__clear').removeClass('dropdown__clear_disabled')
+    $(value).text(val);//присвоение значения параметру
+    $(clearButton).removeClass('dropdown__clear_disabled')//включение кнопки "очистить"
     if (val==maxVal) {
       $(this).attr('disabled', true)
     } else if(val==minVal+1) {
@@ -105,14 +118,20 @@ $('.dropdown__button').click(function (event) {
     }
   }else{
     val--;
+    $(value).text(val);
     if (val==minVal) {
       $(this).attr('disabled', true)
+      let sum=0;
+      $(menu).find('.dropdown__quantity').each(function(){
+        sum+=+$(this).text();
+      });
+      if (sum==0) $(clearButton).addClass('dropdown__clear_disabled');//отключение кнопки "очистить"
     } else if (val==maxVal-1) {
       $(parent).find('#button-plus').removeAttr('disabled') 
     }
   }
 
-  $(value).text(val);//присвоение значения параметру
+  
   
   DropdownText= $(parent).parent('.dropdown__item').parent('.dropdown__menu').parent('.dropdown').find('.dropdown__text');
 
@@ -123,12 +142,17 @@ $('.dropdown__button').click(function (event) {
 function dropdownTypeDistribution(text,isCalc){
   if  (type=='room'){
     dropdownTextSemantica(val, itemsRooms, droptownRoomsText);
-    calcDropdownText(text)
+    calcDropdownText(text, droptownRoomsText, droptownRoomsDefaultText)
   } else if (type=='guest'){
-    isCalc ? totalGuests++:totalGuests--;
-    let arr=[];
-    dropdownTextSemantica(totalGuests, guests, arr);
-    setDropdownText(text, arr)
+    if (type=='guest'){
+      if (item=='notbaby'){
+        isCalc ? totalNotbaby++:totalNotbaby--;
+        dropdownTextSemantica(totalNotbaby, itemsGuests, droptownGuestsText);
+      } else{
+        dropdownTextSemantica(val, itemsGuests, droptownGuestsText);
+      }
+      calcDropdownText(text, droptownGuestsText, droptownGuestsDefaultText)
+    }
   }
 }
 
@@ -138,37 +162,42 @@ function setDropdownText(elem, text){
 }
 
 //сбор слов с разных параметров о один текст
-function calcDropdownText (elem){
+function calcDropdownText (elem, arr, def){
   let text=''; 
-  for (let i=0; i<droptownRoomsText.length; i++) {
-    if (droptownRoomsText[i]!='' && droptownRoomsText[i]!=droptownRoomsText[0]&&text!=''){
+  for (let i=0; i<arr.length; i++) {
+    if (text.length+arr[i].length>25){
+      text+='...'
+      break
+    }
+    if (i!=0&&text!=''&&arr[i]!=''){
       text+=', ';
     };
-    text+=droptownRoomsText[i];
+    
+    text+=arr[i];
   }
-  if (text=='') text=droptownRoomsDefaultText;
+  if (text=='') text=def; 
   setDropdownText(elem, text)
 }
 
+
+
 //Определение необходимого окончания
 function dropdownTextSemantica(val, array, outputArray){
-  let n=0;
-  for (let arr of array) {
-    if(arr.item==item){
+  for (let n=0; n< array.length;n++) {
+    if(array[n].item==item){
       let message;
       if (val==0){
-        message=arr.words[0];
+        message=array[n].words[0];
       } else if (val==1){
-        message= val+' '+arr.words[1];
+        message= val+' '+array[n].words[1];
       } else if (val<=4){
-        message=val+' '+arr.words[2];
+        message=val+' '+array[n].words[2];
       }else {
-        message=val+' '+arr.words[3];
+        message=val+' '+array[n].words[3];
       };
       outputArray[n]= message;
       break;
     }
-n++;
   }
 }
 
@@ -185,7 +214,7 @@ $('.button_gray').click(function (event) {
   const dropdown=$(this).parent('.dropdown__clear').parent('.dropdown__buttons').parent('.dropdown__menu').parent('.dropdown')
   const dropdownItem = $(dropdown).find('.dropdown__item');
     let isGuest = $(dropdownItem).data('type')=='guest';
-    if (isGuest)  totalGuests=0;
+    if (isGuest)  totalNotbaby=0;
     $(dropdownItem).find('.dropdown__quantity').each(function(){
       $(this).text(minVal);
           })

@@ -6,3 +6,11 @@ import '../../modules/range-slider/range-slider'
 import '../../modules/expandable-checkbox-list/expandable-checkbox-list'
 import '../../modules/room-card/room-card'
 import '../../modules/footer/footer'
+
+$(document).ready(function () {
+    $('.search-room__filters-ico').click(function (event) {
+      $('.search-room__filters').toggleClass('search-room__filters_active');
+      $(this).toggleClass('search-room__filters-ico_active');
+      $('body').toggleClass('lock');
+    });
+})
