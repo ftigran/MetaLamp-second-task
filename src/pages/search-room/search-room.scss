@@ -1,0 +1,43 @@
+@import "../../template/template.scss";
+
+.search-room {
+  margin-top: 70px;
+
+  &__container {
+    max-width: 1160px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 266px auto;
+    column-gap: 60px;
+  }
+
+  &__filters {
+  }
+
+  &__description {
+  }
+
+  &__rooms {
+  }
+}
+.rooms {
+  &__title {
+  }
+
+  &__container {
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 20px 12px;
+
+  }
+  &__item {
+    list-style: none;
+  }
+
+  &__link {
+  }
+  &__pagination {
+  }
+}

@@ -1,0 +1,61 @@
+include ../../template/template
+
+mixin rooms-list(props, link=emptylink)
+    li.rooms__item
+        a.rooms__link(href=link)
+            +room-card(props[0], props[1], props[2], props[3], props[4], props[5])
+
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title search-room
+    body
+        +header
+        .search-room
+            .search-room__container
+                .search-room__filters
+                    +filter-date-dropdown('даты пребывания в отеле', '19 авг - 23 авг')
+                    +dropdown('guest',0,0,[2,1,1])
+                    +range-slider('диапазон цены')
+                    .search-room__description Стоимость за сутки пребывания в номере
+                    +checkbox-buttons([0,1,1], 'можно курить', 'Можно с питомцами', 'Можно пригласить гостей (до 10 человек)')
+                    +rich-checkbox-buttons({
+                            items:[
+                                {
+                                title:'Широкий коридор',
+                                subtitle:'Ширина коридоров в номере не менее 91 см.'
+                                },
+                                {
+                                title:'Помощник для инвалидов',
+                                subtitle:'На 1 этаже вас встретит специалист и проводит до номера.'
+                                }
+                                ]})
+                    +dropdown('room',0,0,[2,2,0])
+                    +expandable-checkbox-list('дополнительные удобства', 0, [0,1,1,1,0,0,0],
+                        'Завтрак',
+                        'Письменный стол',
+                        'Стул для кормления',
+                        'Кроватка',
+                        'Шампунь',
+                        'Телевизор',
+                        'Шампунь')
+                .search-room__rooms.rooms
+                    h1.rooms__title Номера, которые мы для вас подобрали
+                    ul.rooms__container
+                        +rooms-list(['../src/img/rooms/room-1.jpg', 888, '9 990', 5, 145, 'люкс'])
+                        +rooms-list(['../src/img/rooms/room-2.jpg', 840, '9 990', 4, 65])
+                        +rooms-list(['../src/img/rooms/room-3.jpg', 980, '8 500', 3, 35, 'люкс'])
+                        +rooms-list(['../src/img/rooms/room-4.jpg', 856, '7 300', 5, 19])
+                        +rooms-list(['../src/img/rooms/room-5.jpg', 740, '6 000', 4, 44])
+                        +rooms-list(['../src/img/rooms/room-6.jpg', 982, '5 800', 3, 56])
+                        +rooms-list(['../src/img/rooms/room-7.jpg', 678, '5 500', 5, 45])
+                        +rooms-list(['../src/img/rooms/room-8.jpg', 450, '5 300', 4, 39])
+                        +rooms-list(['../src/img/rooms/room-9.jpg', 350, '5 000', 3, 77])
+                        +rooms-list(['../src/img/rooms/room-10.jpg', 666, '5 000', 5, 25])
+                        +rooms-list(['../src/img/rooms/room-11.jpg', 444, '5 000', 3, 15])
+                        +rooms-list(['../src/img/rooms/room-12.jpg', 352, '5 000', 3, 55])
+                    .rooms__pagination
+                        +pagination
+        +footer
