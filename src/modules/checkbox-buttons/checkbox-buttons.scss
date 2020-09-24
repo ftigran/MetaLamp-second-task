@@ -4,7 +4,7 @@
         list-style: none;
         padding-left: 0px;
         width: 222px;
-        margin: 0;
+        margin: 17px 0 0 0;
     }
 
     &__checkbox {
@@ -28,7 +28,7 @@
         min-height: 20px;
         &::before {
             position: absolute;
-            left: -29px;
+            left: -30px;
             content: "";
             display: inline-block;
             top: 0px;

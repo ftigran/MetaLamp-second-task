@@ -22,4 +22,4 @@ mixin rich-checkbox-buttons(props={})
             li.rich-checkbox-buttons__item
                 input(type="checkbox", class="rich-checkbox-buttons__checkbox" id="rich-checkbox" + nr)
                 label(class="rich-checkbox-buttons__label" for="rich-checkbox" + nr)=title
-                    p.rich-checkbox-buttons__subtitle=subtitle
+                    p.rich-checkbox-buttons__subtitle!=subtitle

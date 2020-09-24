@@ -4,7 +4,13 @@ mixin rooms-list(props, link=emptylink)
     li.rooms__item
         a.rooms__link(href=link)
             +room-card(props[0], props[1], props[2], props[3], props[4], props[5])
-
+mixin wrapper-text(text)
+    li.filters__item
+        h3.filters__label=text
+        block
+mixin wrapper()
+    li.filters__item
+        block
 <!DOCTYPE html>
 html(lang="ru")
     head
@@ -15,32 +21,44 @@ html(lang="ru")
         +header
         .search-room
             .search-room__container
-                .search-room__filters
-                    +filter-date-dropdown('даты пребывания в отеле', '19 авг - 23 авг')
-                    +dropdown('guest',0,0,[2,1,1])
-                    +range-slider('диапазон цены')
-                    .search-room__description Стоимость за сутки пребывания в номере
-                    +checkbox-buttons([0,1,1], 'можно курить', 'Можно с питомцами', 'Можно пригласить гостей (до 10 человек)')
-                    +rich-checkbox-buttons({
-                            items:[
-                                {
-                                title:'Широкий коридор',
-                                subtitle:'Ширина коридоров в номере не менее 91 см.'
-                                },
-                                {
-                                title:'Помощник для инвалидов',
-                                subtitle:'На 1 этаже вас встретит специалист и проводит до номера.'
-                                }
-                                ]})
-                    +dropdown('room',0,0,[2,2,0])
-                    +expandable-checkbox-list('дополнительные удобства', 0, [0,1,1,1,0,0,0],
-                        'Завтрак',
-                        'Письменный стол',
-                        'Стул для кормления',
-                        'Кроватка',
-                        'Шампунь',
-                        'Телевизор',
-                        'Шампунь')
+                ul.search-room__filters.filters
+                    +wrapper()
+                        +filter-date-dropdown('даты пребывания в отеле', '19 авг - 23 авг')
+                    +wrapper-text('гости')
+                        +dropdown('guest',0,0,[2,1,1])
+                    +wrapper()
+                        +range-slider('диапазон цены')
+                        .filters__description Стоимость за сутки пребывания в номере
+                    +wrapper-text('Checkbox Buttons')
+                        +checkbox-buttons([0,1,1], 
+                            'Можно курить',
+                            'Можно с питомцами',
+                            'Можно пригласить гостей (до 10 человек)')
+                    +wrapper-text('доступность')
+                        +rich-checkbox-buttons({
+                                items:[
+                                    {
+                                    title:'Широкий коридор',
+                                    subtitle:
+                                    'Ширина коридоров в номере <br /> не менее 91 см.'
+                                    },
+                                    {
+                                    title:'Помощник для инвалидов',
+                                    subtitle:
+                                    'На 1 этаже вас встретит специалист<br /> и проводит до номера.'
+                                    }
+                                    ]})
+                    +wrapper-text('удобства номера')
+                        +dropdown('room',0,0,[2,2,0])
+                    +wrapper
+                        +expandable-checkbox-list('дополнительные удобства', 0, [0,1,1,1,0,0,0],
+                            'Завтрак',
+                            'Письменный стол',
+                            'Стул для кормления',
+                            'Кроватка',
+                            'Шампунь',
+                            'Телевизор',
+                            'Шампунь')
                 .search-room__rooms.rooms
                     h1.rooms__title Номера, которые мы для вас подобрали
                     ul.rooms__container
@@ -58,4 +76,5 @@ html(lang="ru")
                         +rooms-list(['../src/img/rooms/room-12.jpg', 352, '5 000', 3, 55])
                     .rooms__pagination
                         +pagination
+            
         +footer

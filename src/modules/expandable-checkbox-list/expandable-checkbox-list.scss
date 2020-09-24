@@ -31,12 +31,14 @@
   }
 
   &__list {
-      transition: max-height 0.4s;
+      transition: max-height 0.4s, opacity 0.3s;
+      opacity: 0;
       max-height:0px;
       overflow:hidden;
       &_show{
         max-height: 500px;
         overflow:inherit;
+        opacity: 1;
       }
   }
 }

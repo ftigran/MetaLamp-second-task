@@ -15,6 +15,6 @@ $('.range-slider__input').ionRangeSlider({
     hide_from_to: true,
     grid: false,
     onChange: function (data) {
-        $('.range-slider__value').text(data.from.toLocaleString('ru') + ' - ' + data.to.toLocaleString('ru') + '₽')
+        $('.range-slider__value').text(data.from.toLocaleString('ru')+ '₽ - ' + data.to.toLocaleString('ru') + '₽')
     }
 });

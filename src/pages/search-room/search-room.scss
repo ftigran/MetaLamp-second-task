@@ -2,19 +2,22 @@
 
 .search-room {
   margin-top: 70px;
-
+  padding-top: 25px;
+  border-bottom: 1px solid $dark-shade25;
   &__container {
     max-width: 1160px;
     margin: auto;
     display: grid;
     grid-template-columns: 266px auto;
     column-gap: 60px;
+    margin-bottom: 31px;
   }
 
   &__filters {
-  }
-
-  &__description {
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-rows: 77px 100px 96px 160px 175px 91px;
   }
 
   &__rooms {
@@ -22,6 +25,7 @@
 }
 .rooms {
   &__title {
+    margin: 5px 0 21px -1px;
   }
 
   &__container {
@@ -30,7 +34,6 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     gap: 20px 12px;
-
   }
   &__item {
     list-style: none;
@@ -39,5 +42,22 @@
   &__link {
   }
   &__pagination {
+    margin: 41px auto;
+    padding-right: 12px;
+    max-width: 241px;
+  }
+}
+
+.filters {
+  list-style: none;
+  &__description {
+    margin-top: 9px;
+    margin-bottom: 29px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  &__label {
+    margin-bottom: 5px;
   }
 }
