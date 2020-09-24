@@ -24,16 +24,19 @@ mixin header(login, isSelected)
                                 span.header__expansion-ico expand_more
                 
                 if login
-                    .header__user face
                     span.header__user-line
-                    a.header__link.header__link_user=login
-                else
-                    .header__guest account_circle
-                    .header__guest-links
-                    a.header__link.header__link_login-button(href="empty")
-                        +button-border('войти')
-                    a.header__link.header__link_enter-button(href="empty")
-                        +button-fill('зарегистрироваться')
+                    a.header__link.user(href="empty")
+                        .user__ico face
+                        .user__name=login
+                else                    
+                    a.header__link.login(href="empty")
+                        .login__ico input
+                        .login__button
+                            +button-border('войти')
+                    a.header__link.reg(href="empty")
+                        .reg__ico account_circle
+                        .reg__button
+                            +button-fill('зарегистрироваться')
                     
     
     if login

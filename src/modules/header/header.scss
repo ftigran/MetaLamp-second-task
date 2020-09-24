@@ -55,21 +55,6 @@
     &_selected {
       font-weight: bold;
     }
-    &_user {
-      padding-top: 10px;
-      height: 30px;
-    }
-    &_login-button {
-      width: 87px;
-      height: 34px;
-      padding-bottom: 7px;
-    }
-
-    &_enter-button {
-      width: 196px;
-      height: 34px;
-      padding-bottom: 7px;
-    }
   }
 
   &__expansion-ico {
@@ -81,42 +66,52 @@
   &__burger {
     margin-right: 20px;
   }
-  &__user,
-  &__guest,
-  &__burger {
-    cursor: pointer;
-    display: none;
-  }
-  &__user,
-  &__guest {
-    @include text("material");
-    font-size: 34px;
-    line-height: 34px;
-  }
+}
+.user__name {
+  padding-top: 10px;
+  height: 30px;
+}
+.login__button {
+  width: 87px;
+  height: 34px;
+  padding-bottom: 7px;
+}
+.reg__button {
+  width: 196px;
+  height: 34px;
+  padding-bottom: 7px;
+}
+.login__ico,
+.reg__ico,
+.user__ico {
+  cursor: pointer;
+  display: none;
+  @include text("material");
+  font-size: 34px;
+  line-height: 34px;
+  width: 34px;
+  height: 34px;
 }
 @media (max-width: 985px) {
-  .header {
-    &__link_login-button,
-    &__link_enter-button {
-      display: none;
-    }
-    &__guest {
-      display: block;
-    }
+  .reg__button {
+    display: none;
+  }
+  .reg__ico {
+    display: block;
   }
 }
 @media (max-width: 910px) {
-  .header {
-    &__user-line,
-    &__link_user {
-      display: none;
-    }
-    &__user {
-      display: block;
-    }
+  .user__ico,
+  .login__ico {
+    display: block;
+  }
+  .user__name,
+  .header__user-line,
+  .login__button {
+    display: none;
   }
 }
-@media (max-width: 696px) {
+@media (max-width: 791px) {
   body.lock {
     overflow: hidden;
   }

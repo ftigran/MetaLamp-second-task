@@ -99,29 +99,22 @@
           content: "";
           position: absolute;
           display: block;
-          width: 300px;
+          width: 303px;
           height: 100%;
-          margin: 3px;
+          margin: 3px 3px 3px 0;
+          z-index: -1;
           background-color: #fff;
         }
       }
       &-ico {
         position: relative;
-        //@include text("material");
         display: block;
-        height: 20px;
+        height: 24px;
         width: 32px;
         flex-shrink: 0;
+        margin-right: 15px;
+
         border-top: 4px solid $dark-shade75;
-        //font-size: 34px;
-        z-index: 3;
-        &::after,
-        &::before {
-          position: absolute;
-          content: "";
-          height: 4px;
-          background-color: $dark-shade75;
-        }
         &::after {
           width: 25%;
           bottom: 0;
@@ -132,10 +125,48 @@
           bottom: 10px;
           left: 16.5%;
         }
-        &_active {
-          position: absolute;
-          left: 25px;
-          
+        &-line {
+          z-index: 40;
+
+          //width: 100%;
+          //height: 4px;
+        }
+
+        &-line_active {
+          position: fixed;
+          top: 100px;
+          left: 266px;
+          padding: 7px;
+          border: solid $dark-shade75;
+          border-width: 0 3px 3px 0;
+          transform: rotate(-45deg);
+
+          &::after,
+          &::before {
+            content: "";
+            height: 3px;
+            background-color: $dark-shade75;
+          }
+          &::after {
+            background-color: red;
+width: 100%;
+height: 100%;
+position: absolute;
+
+          }
+          &::before {
+            position: absolute;
+            width: 200%;
+            transform: rotate(45deg) translate(-15px, 8.5px);
+          } /*
+          &::before {
+            width: 100%;
+            transform: translateX(-4px) rotate(45deg);
+          }
+          &::after {
+            width: 100%;
+            transform: translate(-5px, -10px) rotate(-45deg);
+          }*/
         }
       }
     }
@@ -144,6 +175,7 @@
     display: flex;
     justify-content: space-between;
     flex-direction: row-reverse;
+    align-items: center;
   }
 }
 
