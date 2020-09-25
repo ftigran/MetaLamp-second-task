@@ -1,5 +1,6 @@
 import './header.scss'
-
+import '../../modules/button-border/button-border'
+import '../../modules/button-fill/button-fill'
 
 $(document).ready(function () {
   $('.header__burger').click(function (event) {

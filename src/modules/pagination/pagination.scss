@@ -1,9 +1,10 @@
+@import "../../template/template.scss";
 .pagination {
   &__container {
     display: flex;
   }
   &__item {
-    @include h3-text;
+    @include text('h3');
     display: inline-block;
     width: 40px;
     height: 40px;

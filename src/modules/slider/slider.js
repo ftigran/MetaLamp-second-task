@@ -1,3 +1,5 @@
+import './slider.scss'
+
 import "slick-carousel";
 
 $(document).ready(function () {

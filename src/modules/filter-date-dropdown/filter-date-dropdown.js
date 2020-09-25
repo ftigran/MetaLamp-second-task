@@ -1,3 +1,4 @@
+import './filter-date-dropdown.scss'
 import '../calendar/calendar'
 
 $('.filter-date-dropdown__input').click(function(){

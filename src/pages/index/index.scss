@@ -1,2 +1,114 @@
 @import "../../template/template.scss";
 
+html,
+body {
+  height: 100%;
+}
+.wrapper {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  animation: clears 0.3s linear 1s;
+  animation-fill-mode: forwards;
+  overflow: hidden;
+}
+.name {
+  //display: none;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 140px;
+  position: relative;
+  padding: 30px;
+  animation: opacity 1s linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  &:before,
+  &:after {
+    content: "fTigran";
+    color: #fff;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    padding: 30px;
+  }
+  &:before {
+    left: 3px;
+    text-shadow: -3px 0 red;
+    animation: glitch-before 2s linear 0s infinite alternate;
+  }
+  &:after {
+    left: -3px;
+    text-shadow: -3px 0 blue;
+    animation: glitch-after 2s linear 0s infinite alternate;
+  }
+}
+
+@keyframes glitch-before {
+  $steps: 20;
+  @for $i from 0 through $steps {
+    #{percentage($i*(1/$steps))} {
+      clip: rect(random(150) + px, 350px, random(150) + px, 30px);
+    }
+  }
+}
+
+@keyframes glitch-after {
+  $steps: 20;
+  @for $i from 0 through $steps {
+    #{percentage($i*(1/$steps))} {
+      clip: rect(random(150) + px, 350px, random(150) + px, 30px);
+    }
+  }
+}
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes clears {
+  0% {
+    opacity: 1;  }
+  99%{ opacity: 0;  
+  }
+  100% {
+      width: 0%;
+ }
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: black;
+}
+li {
+  list-style: none;
+  margin: 25px;
+  text-transform: none;
+}
+a,
+ul {
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  text-decoration: none;
+}
+ul {
+  @include text("h3");
+  font-size: 54px;
+  color: #fff;
+}

@@ -1,6 +1,6 @@
 import 'air-datepicker/dist/css/datepicker.min.css';
 import './calendar.scss';
-
+import '../../modules/button/button'
 import 'air-datepicker';
 
 

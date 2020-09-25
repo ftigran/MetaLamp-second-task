@@ -1,3 +1,5 @@
+import './like-button.scss'
+
 $('.like-button').click(function(){
     const like = $(this).find('.like-button__text')
     let likes = $(like).text();

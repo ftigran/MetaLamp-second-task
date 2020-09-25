@@ -1,6 +1,7 @@
+@import "../../template/template.scss";
 .text-field {
     &__input {
-        @include body-text;
+        @include text('body');
         height: 44px;
         width: 100%;
         @include border;

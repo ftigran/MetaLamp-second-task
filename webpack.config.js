@@ -29,6 +29,7 @@ const common = merge([{
             'search-room': PATHS.source + '/pages/search-room/search-room.js',
             'registration': PATHS.source + '/pages/registration/registration.js',
             'sign-in': PATHS.source + '/pages/sign-in/sign-in.js',
+            'room-details': PATHS.source + '/pages/room-details/room-details.js',
 
         },
         output: {
@@ -81,6 +82,10 @@ const common = merge([{
                 filename: 'sign-in.html',
                 chunks: ['sign-in', 'common'],
                 template: PATHS.source + '/pages/sign-in/sign-in.pug'
+            }),new HtmlWebpackPlugin({
+                filename: 'room-details.html',
+                chunks: ['room-details', 'common'],
+                template: PATHS.source + '/pages/room-details/room-details.pug'
             }),
             new MiniCssExtractPlugin({
                 filename: '[name].css',
