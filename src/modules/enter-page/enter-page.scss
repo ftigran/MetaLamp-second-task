@@ -5,8 +5,13 @@
 height: 70px;
 }
   &__container {
-    margin: auto;
-    padding: 19px 0;
-    max-width: 380px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 683px;
+  }
+  &__block{
+    min-width: 380px;
+
   }
 }
