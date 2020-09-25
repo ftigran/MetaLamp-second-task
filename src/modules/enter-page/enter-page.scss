@@ -1,0 +1,12 @@
+.enter-page {
+  background: url("../../img/login-background.jpg") no-repeat;
+  background-size: cover;
+&__header-gap{
+height: 70px;
+}
+  &__container {
+    margin: auto;
+    padding: 19px 0;
+    max-width: 380px;
+  }
+}
