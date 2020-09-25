@@ -38,9 +38,20 @@ html(lang="ru")
                                         ico: 'whatshot'
                                         },
                                         ]})
-                    .room-details__rates
-                        h2.room-details__title Сведения о номере
-                            img(src='../src/img/rooms/Pie chart.jpg')
+                    .room-details__impression.impression
+                        h2.room-details__title.impression__title Впечатления от номера
+                        .impression__container
+                            .impression__box 
+                                .impression__circle
+                                    .impression__pie   
+                                .impression__text
+                                    .impression__val 260
+                                    .impression__votes голосов  
+                            ul.impression__list
+                                li.impression__item Великолепно
+                                li.impression__item Хорошо
+                                li.impression__item Удовлетворительно
+                                li.impression__item Разочарован
                     .room-details__reviews.reviews
                         .reviews__header
                             h2.room-details__title Отзывы посетителей номера

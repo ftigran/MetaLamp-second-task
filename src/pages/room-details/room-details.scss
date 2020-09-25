@@ -1,3 +1,5 @@
+@import "../../template/template.scss";
+
 .room-details {
   &__images {
     display: grid;
@@ -16,17 +18,21 @@
   &__container {
     display: flex;
     max-width: 1160px;
-    margin: auto;
+    margin: 0 auto 61px;
   }
   &__reservation {
     grid-area: r;
   }
   &__return {
     grid-area: d;
+    padding-left: 1px;
+    &-text {
+      margin: 17px 8px 0 0;
+    }
   }
   &__info {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 290px auto auto;
     grid-gap: 30px 70px;
     grid-template-areas:
       "b e r"
@@ -40,17 +46,20 @@
   &__title {
     margin: 0;
     &_spaced {
-      margin-left: 15px;
+      margin: 0 0 17px 20px;
     }
   }
   &__features-list-wrapper {
     margin-top: 20px;
     //margin-bottom: ;
   }
+  &__bullet-list {
+  }
 }
 .container {
 }
 .reviews {
+  padding-top: 3px;
   &__header {
     display: flex;
     justify-content: space-between;
@@ -60,5 +69,122 @@
   }
   &__item {
     margin: 20px 1px 25px;
+    &:last-of-type {
+      margin-bottom: 3px;
+    }
+  }
+}
+
+$circleSize: 121px;
+$circleMargin: 2px;
+$circleLineWidth: 4px;
+.impression {
+  &__container {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 21px;
+    align-items: flex-end;
+  }
+  &__title{
+    margin-left: 1px;
+  }
+  &__list {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 15px;
+  }
+  &__item {
+    padding-left: 15px;
+    &::before {
+
+      margin-right: 5px;
+      content: "";
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 5px;
+    }
+    &:nth-child(1) {
+      &::before {
+        background: linear-gradient(180deg, #ffe39c 0%, #ffba9c 100%);
+      }
+    }
+    &:nth-child(2) {
+      &::before {
+        background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+      }
+    }
+    &:nth-child(3) {
+      &::before {
+        background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+      }
+    }
+    &:nth-child(4) {
+      &::before {
+        background: linear-gradient(180deg, #919191 0%, #3d4975 100%);
+      }
+    }
+  }
+
+  &__box {
+    position: relative;
+    width: $circleSize;
+    height: $circleSize;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 1px;
+  }
+  &__votes {
+    @include text("h3");
+    color: $purple;
+    padding-bottom: 6px;
+  }
+  &__val {
+    @include text("h1");
+    color: $purple;
+  }
+  &__text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: $circleSize -$circleLineWidth * 2;
+    height: $circleSize -$circleLineWidth * 2;
+    border-radius: 50%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    margin: $circleLineWidth;
+    background-color: #fff;
+  }
+
+  &__circle {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-areas: "o p" "o g";
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: $circleMargin;
+    grid-template-columns: repeat(2, 1fr);
+    position: relative;
+    &::after,
+    &::before {
+      content: "";
+    }
+    &::before {
+      background: linear-gradient(#bc9cff, #8ba4f9);
+      grid-area: p;
+    }
+    &::after {
+      background: linear-gradient(#6fcf97, #66d2ea);
+      grid-area: g;
+    }
+  }
+  &__pie {
+    background: linear-gradient(#ffe39c, #ffba9c);
+    grid-area: o;
   }
 }
