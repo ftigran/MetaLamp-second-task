@@ -14,8 +14,8 @@
     }
 
     &__name {
-        margin-top: 0px;
-        margin-bottom: 3px;
+        margin-top: 1px;
+        margin-bottom: 2px;
         font-size: 14px;
         line-height: 19px;
         text-transform: none;
@@ -27,11 +27,11 @@
 
     &__body {
         display: flex;
-        margin-top: 9px;
+        margin-top: 10px;
     }
 
-    &__like {margin-top: 3px;
-    margin-left: 1px;}
+    &__like {margin-top: 2px;
+    margin-left: 2px;}
 
     &__date {}
 

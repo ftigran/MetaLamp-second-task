@@ -1,0 +1,64 @@
+.room-details {
+  &__images {
+    display: grid;
+    grid-template-columns: 66% 33%;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "a b"
+      " a c";
+    //height: 485px;
+    max-width: 1440px;
+    margin: 70px auto 67px;
+  }
+  &__image:first-child {
+    grid-area: a;
+  }
+  &__container {
+    display: flex;
+    max-width: 1160px;
+    margin: auto;
+  }
+  &__reservation {
+    grid-area: r;
+  }
+  &__return {
+    grid-area: d;
+  }
+  &__info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px 70px;
+    grid-template-areas:
+      "b e r"
+      "o o r"
+      "q d r";
+  }
+  &__reviews {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  &__title {
+    margin: 0;
+    &_spaced {
+      margin-left: 15px;
+    }
+  }
+  &__features-list-wrapper {
+    margin-top: 20px;
+    //margin-bottom: ;
+  }
+}
+.container {
+}
+.reviews {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__subtitle {
+    padding-top: 2px;
+  }
+  &__item {
+    margin: 20px 1px 25px;
+  }
+}
