@@ -1,17 +1,17 @@
 .enter-page {
   background: url("../../img/login-background.jpg") no-repeat;
   background-size: cover;
-&__header-gap{
-height: 70px;
-}
   &__container {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 683px;
   }
-  &__block{
-    min-width: 380px;
-
+  &__block {
+    flex-grow: 1;
+    max-width: 380px;
   }
+}
+body {
+  padding-top: 70px;
 }

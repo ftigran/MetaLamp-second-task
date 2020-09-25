@@ -1,13 +1,15 @@
 mixin enter
-    .enter
-        .enter__container
-            h1.enter__title Войти
-            .enter__wrapper
-                +text-field('Email', 'email')
-            .enter__wrapper
-                +text-field('Пароль', 'password')
-            .enter__button
-                +button-arrow('войти')
-            .enter__registration Нет аккаунта на Toxin?
-                .enter__button-registration
-                    +button-border('создать')
+    form.enter
+        header.enter__header
+                h1.enter__title Войти
+        .enter__wrapper
+            +text-field('Email', 'email')
+        .enter__wrapper
+            +text-field('Пароль', 'password')
+        .enter__button
+            +button-arrow('войти')
+        .enter__registration Нет аккаунта на Toxin?
+            .enter__button-registration
+                +button-border('создать')
+        //form.enter__container
+            
