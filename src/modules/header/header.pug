@@ -29,11 +29,11 @@ mixin header(login, isSelected)
                         .user__ico face
                         .user__name=login
                 else                    
-                    a.header__link.login(href="empty")
+                    a.header__link.login(href="./enter.html")
                         .login__ico input
                         .login__button
                             +button-border('войти')
-                    a.header__link.reg(href="empty")
+                    a.header__link.reg(href="./registration.html")
                         .reg__ico account_circle
                         .reg__button
                             +button-fill('зарегистрироваться')

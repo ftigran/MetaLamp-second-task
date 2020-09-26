@@ -3,9 +3,9 @@ mixin date-dropdown(isOpen, textIn='ДД.ММ.ГГГГ', textOut='ДД.ММ.ГГ
     .date-dropdown
         .date-dropdown__controls
             label.date-dropdown__label(for="date-dropdown-in"+ddId) Прибытие
-            input.date-dropdown__input.in(type="text" readonly placeholder=textIn id="date-dropdown-in"+ddId)
+                input.date-dropdown__input.in(type="text" readonly placeholder=textIn id="date-dropdown-in"+ddId)
             label.date-dropdown__label(for="date-dropdown-out"+ddId) Выезд
-            input.date-dropdown__input.out(type="text" readonly placeholder=textOut id="date-dropdown-out"+ddId)
+                input.date-dropdown__input.out(type="text" readonly placeholder=textOut id="date-dropdown-out"+ddId)
             -ddId++
         .date-dropdown__calendar
             +calendar(isOpen)

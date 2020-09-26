@@ -26,12 +26,10 @@ mixin dropdown(type='room', isExpanded=false, isControls=false, vals=[0,0,0])
         -ddClass='dropdown'
     //-Определение модификатора type, параметров внутри dropdown
     if type=='room'
-        -ddClass+=' dropdown_for-room'
         - names=['спальни', 'кровати', 'ванные комнаты']
         - ids = ['bedroom', 'bed', 'bathroom']
         -isExist=true
     else if type=='guest'
-        -ddClass+=' dropdown_for-guest'
         - names=['взрослые', 'дети', 'младенцы']
         - ids = ['notbaby', 'notbaby', 'baby']
         -isExist=true

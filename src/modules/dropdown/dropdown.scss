@@ -32,14 +32,6 @@
     }
   }
 
-  &_for- {
-    &room {
-      width: 266px;
-    }
-    &guest {
-      min-width: 266px;
-    max-width: 320px;}
-  }
   &__menu {
     position: absolute;
     transition: max-height 0.3s, opacity 0.3s;

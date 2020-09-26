@@ -11,18 +11,18 @@
   }
   &__button {
     position: absolute;
-    padding-left: 14px;
+    padding-left: 22px;
     padding-top: 8px;
     box-sizing: border-box;
     right: 4px;
     bottom: 2px;
-    width: 120px;
+    width: 40%;
     height: 46px;
     cursor: pointer;
   }
 }
 .datepicker {
-  width: 320px;
+  width: 100%;
   border: 1px solid $dark-shade25;
   box-sizing: border-box;
   box-shadow: 0px 10px 20px $dark-shade5;
@@ -77,7 +77,7 @@
     margin-bottom: 10px;
   }
   &--content {
-    margin: 0 20px 0 20px;
+    margin: 0 20px;
     padding: 0;
     width: 280px;
   }
@@ -105,7 +105,7 @@
       background-color: transparent;
     }
     &s {
-      width: 120px;
+      width: 40%;
 
       border: none;
     }

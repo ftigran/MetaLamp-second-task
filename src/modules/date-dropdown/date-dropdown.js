@@ -5,7 +5,7 @@ import '../calendar/calendar'
 
 // клик по полю - открытие календаря
 $('.date-dropdown__input').click(function(){
-    $(this).parent('.date-dropdown__controls').parent('.date-dropdown').find('.calendar').toggleClass('calendar_showed')
+    $(this).parent('.date-dropdown__label').parent('.date-dropdown__controls').parent('.date-dropdown').find('.calendar').toggleClass('calendar_showed')
 })
 
 // клик по кнопке применить - ввод дат в поля
