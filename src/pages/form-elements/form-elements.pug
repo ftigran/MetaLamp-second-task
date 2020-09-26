@@ -74,17 +74,18 @@ html(lang="ru")
                 +block-wrapper('pagination')
                     +pagination()
         .container
-            .wrapper
+            .wrapper-266
                 +block-wrapper('Dropdown', 'Default')
-                    +dropdown()
+                    
+                        +dropdown()
                 +block-wrapper('Dropdown', 'expanded')
                     +dropdown('room',0,0, [2, 2, 0])
 
                 .wrapper__gap
-            .wrapper
+            .wrapper-320
                 +block-wrapper('Dropdown', 'expanded')
                     +dropdown('guest', 1, 1)
-            .wrapper
+            .wrapper-320
                 +block-wrapper('Dropdown', 'expanded')
                     +dropdown('guest', 1, 1, [2, 1, 0])
         .container

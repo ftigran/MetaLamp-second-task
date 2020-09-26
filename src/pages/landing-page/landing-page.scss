@@ -36,13 +36,24 @@ html {
     padding-right: 14px;
   }
 }
-@media (max-width: 400px) {
+
+@media (max-width: 380px) {
   .landing-page__container {
     grid-template-columns: 5px auto auto 5px;
+    
   }
+.search-room__container{
+  margin-left: 10px;
+    margin-right: 10px;
 }
-@media (max-width: 340px) {
-  .landing-page__container {
-    grid-template-columns: auto auto auto auto;
+  .datepicker .datepicker {
+    &--content {
+      margin: auto;
+      width: 245px;
+    }
+    &--cell {
+      width: 35px;
+      height: 35px;
+    }
   }
 }
