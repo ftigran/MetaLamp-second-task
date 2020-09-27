@@ -61,9 +61,9 @@ html(lang="ru")
                             'Шампунь')
                 .search-room__rooms.rooms
                     h1.rooms__title Номера, которые мы для вас подобрали
-                        .search-room__filters-ico
-                            .search-room__filters-ico-line
+                        span.search-room__filters-ico tune
                     ul.rooms__container
+                        //.sda(style='background: red; width: 50px; height: 100px; flex: auto;')
                         +rooms-list(['../src/img/rooms/room-1.jpg', 888, '9 990', 5, 145, 'люкс'])
                         +rooms-list(['../src/img/rooms/room-2.jpg', 840, '9 990', 4, 65])
                         +rooms-list(['../src/img/rooms/room-3.jpg', 980, '8 500', 3, 35, 'люкс'])

@@ -14,7 +14,6 @@ import '../../modules/footer/footer'
 $(document).ready(function () {
     $('.search-room__filters-ico').click(function (event) {
       $('.search-room__filters').toggleClass('search-room__filters_active');
-      $(this).find('.search-room__filters-ico-line').toggleClass('search-room__filters-ico-line_active');
-      $('body').toggleClass('lock');
+      $(this).toggleClass('search-room__filters-ico_active');
     });
 })

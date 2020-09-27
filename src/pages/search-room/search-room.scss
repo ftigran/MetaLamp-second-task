@@ -5,19 +5,21 @@
   padding-top: 25px;
   border-bottom: 1px solid $dark-shade25;
   &__container {
-    max-width: 1160px;
+    max-width: 1184px;
+    padding: 0 30px 0 30px;
     margin: auto;
     display: grid;
-    grid-template-columns: 266px auto;
-    column-gap: 60px;
+    grid-template-columns: auto auto;
+    column-gap: 48px;
     margin-bottom: 31px;
   }
 
   &__filters {
     padding: 0;
-    margin: 0;
+    margin: 0 0 0 12px;
     display: grid;
-    grid-template-rows: 77px 100px 96px 160px 175px 91px;
+    grid-template-rows: 77px 100px 96px 160px 175px 80px;
+    grid-template-columns: 266px;
     &-ico {
       display: none;
     }
@@ -28,25 +30,25 @@
 }
 .rooms {
   &__title {
-    margin: 5px 0 21px -1px;
+    margin: 5px 0 21px 11px;
   }
 
   &__container {
     padding: 0;
-    display: grid;
-    grid-template-columns: repeat(3, 270px);
-    grid-template-rows: repeat(4, 257px);
-    gap: 20.5px 12px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
   }
   &__item {
     list-style: none;
+    margin: 0 0 20.5px 12px;
   }
 
   &__link {
     text-decoration: none;
   }
   &__pagination {
-    margin: 41px auto;
+    margin: 20.5px auto 41px;
     padding-right: 12px;
     max-width: 241px;
   }
@@ -65,143 +67,88 @@
     margin-bottom: 5px;
   }
 }
-@media (max-width: 1350px) {
+
+@media (max-width: 1212px) {
+  .rooms__container {
+  }
+  .search-room__container {
+    max-width: 890px;
+  }
+}
+
+@media (max-width: 950px) {
   body.lock {
-    overflow: hidden;
+  }
+  .rooms__item {
+    margin-right: 12px;
+  }
+  .rooms__container {
+    justify-content: center;
+  }
+  .rooms__title {
+    margin:11px 12px 21px;
+    display: flex;
+    justify-content: space-between;
   }
   .search-room {
     &__container {
       display: block;
-      max-width: 834px;
+      max-width: 588px;
     }
     &__filters {
-      display: none;
-      width: 0;
-      opacity: 0;
-      position: absolute;
-      left: -85%;
-
-      top: 70px;
-      opacity: 0;
-      z-index: 3;
-      transition: right 10.3s;
-      &_active {
-        display: grid;
-        width: 266px;
-        //width: 100%;
-        padding: 70px 20px;
-        height: 100%;
-        opacity: 1;
-        left: 0;
-        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-        @include gradient;
-        &::before {
-          content: "";
-          position: absolute;
-          display: block;
-          width: 303px;
-          height: 100%;
-          margin: 3px 3px 3px 0;
-          z-index: -1;
-          background-color: #fff;
-        }
+      &-ico,
+      &-ico::after {
+        @include text("material");
+      }
+      &-ico,
+      &-ico::after {
+        text-align: center;
+        width: 32px;
+        height: 32px;
+        border: 1px solid $dark-shade25;
+        border-radius: 50%;
+        line-height: 32px;
       }
       &-ico {
-        position: relative;
-        display: block;
-        height: 24px;
-        width: 32px;
         flex-shrink: 0;
-        margin-right: 15px;
+        display: block;
 
-        border-top: 4px solid $dark-shade75;
         &::after {
-          width: 25%;
-          bottom: 0;
-          left: 37%;
-        }
-        &::before {
-          width: 66%;
-          bottom: 10px;
-          left: 16.5%;
-        }
-        &-line {
-          z-index: 40;
-
-          //width: 100%;
-          //height: 4px;
-        }
-
-        &-line_active {
-          position: fixed;
+          opacity: 0;
+          transition: opacity 0.2s;
+          position: absolute;
+          z-index: 3;
+          right: 252px;
           top: 100px;
-          left: 266px;
-          padding: 7px;
-          border: solid $dark-shade75;
-          border-width: 0 3px 3px 0;
-          transform: rotate(-45deg);
-
-          &::after,
-          &::before {
-            content: "";
-            height: 3px;
-            background-color: $dark-shade75;
-          }
-          &::after {
-            background-color: red;
-width: 100%;
-height: 100%;
-position: absolute;
-
-          }
-          &::before {
-            position: absolute;
-            width: 200%;
-            transform: rotate(45deg) translate(-15px, 8.5px);
-          } /*
-          &::before {
-            width: 100%;
-            transform: translateX(-4px) rotate(45deg);
-          }
-          &::after {
-            width: 100%;
-            transform: translate(-5px, -10px) rotate(-45deg);
-          }*/
+          content: "keyboard_arrow_left";
+          font-size: 32px;
         }
+        &_active {
+          &::after {
+            opacity: 1;
+          }
+        }
+      }
+      max-width: 0;
+      position: absolute;
+      right: 0;
+      top: 70px;
+      z-index: 3;
+      transition: max-width 0.3s;
+      border-radius: 0 0 0 30px;
+      overflow: hidden;
+      background-color: #fff;
+
+      &_active {
+        padding: 70px 20px 10px;
+        max-width: 266px;
+        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
       }
     }
   }
-  .rooms__title {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row-reverse;
-    align-items: center;
-  }
 }
-
-@media (max-width: 906px) {
-  .search-room {
-    &__container {
-      max-width: 552px;
-    }
-    &__filters {
-    }
-  }
-  .rooms__container {
-    grid-template-columns: repeat(2, 270px);
-    grid-template-rows: repeat(6, 257px);
-  }
-}
-@media (max-width: 612px) {
-  .search-room {
-    &__container {
-      max-width: 270px;
-    }
-    &__filters {
-    }
-  }
-  .rooms__container {
-    grid-template-columns: repeat(1, 270px);
-    grid-template-rows: repeat(12, 257px);
+@media (max-width: 647px) {
+  .search-room__container {
+    max-width: 294px;
   }
 }
