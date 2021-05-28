@@ -145,6 +145,8 @@
       margin-top: 3px;
       height: 28px;
       width: 32px;
+      cursor: pointer;
+
       &::before,
       &::after,
       &-line {
@@ -179,4 +181,12 @@
       }
     }
   }
+}
+.header__burger, .header__link{
+  transition: transform 0.3s, opacity 0.3s;
+  &:hover{
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+
 }
