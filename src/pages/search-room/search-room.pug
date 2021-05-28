@@ -1,6 +1,6 @@
 include ../../template/template
 
-mixin rooms-list(props, link='emptylink')
+mixin rooms-list(props, link='./room-details.html')
     li.rooms__item
         a.rooms__link(href=link)
             +room-card(props[0], props[1], props[2], props[3], props[4], props[5])
@@ -62,7 +62,7 @@ html(lang="ru")
                 .search-room__rooms.rooms
                     h1.rooms__title Номера, которые мы для вас подобрали
                         span.search-room__filters-ico tune
-                    ul.rooms__container
+                    ul.rooms__container#rooms__container
                         //.sda(style='background: red; width: 50px; height: 100px; flex: auto;')
                         +rooms-list(['../src/img/rooms/room-1.jpg', 888, '9 990', 5, 145, 'люкс'])
                         +rooms-list(['../src/img/rooms/room-2.jpg', 840, '9 990', 4, 65])

@@ -17,3 +17,9 @@ $(document).ready(function () {
       $(this).toggleClass('search-room__filters-ico_active');
     });
 })
+const container = document.getElementById("rooms__container")
+container.onclick = (event)=>{
+ if(event.target.localName==`button`){
+  event.preventDefault();
+  }
+}
