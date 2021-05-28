@@ -19,6 +19,8 @@
     white-space: nowrap;
     overflow: hidden;
     cursor: pointer;
+    height: 100%;
+    box-sizing: border-box;
     &::after {
       content: "expand_more";
       position: absolute;
@@ -78,6 +80,8 @@
     color: $dark-shade50;
     background-color: #fff;
     outline: none;
+    cursor: pointer;
+
     &:disabled {
       opacity: 0.5;
     }

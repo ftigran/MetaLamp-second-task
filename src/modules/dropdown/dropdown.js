@@ -76,10 +76,10 @@ let sum=0;
 
 function dropdownButtonDisable(elem){
   if (val==minVal) {
-    $(elem).find('#button-minus').attr('disabled', true)
+    $(elem).find('.button-minus').attr('disabled', true)
   }
   if (val!=maxVal) {
-    $(elem).find('#button-plus').removeAttr('disabled');
+    $(elem).find('.button-plus').removeAttr('disabled');
   }
 }
 //Присвоение значений текста в дропдаунах прии загрузке страницы
@@ -114,7 +114,7 @@ $('.dropdown__button').click(function (event) {
     if (val==maxVal) {
       $(this).attr('disabled', true)
     } else if(val==minVal+1) {
-      $(parent).find('#button-minus').removeAttr('disabled') 
+      $(parent).find('.button-minus').removeAttr('disabled') 
     }
   }else{
     val--;
@@ -127,7 +127,7 @@ $('.dropdown__button').click(function (event) {
       });
       if (sum==0) $(clearButton).addClass('dropdown__clear_disabled');//отключение кнопки "очистить"
     } else if (val==maxVal-1) {
-      $(parent).find('#button-plus').removeAttr('disabled') 
+      $(parent).find('.button-plus').removeAttr('disabled') 
     }
   }
 

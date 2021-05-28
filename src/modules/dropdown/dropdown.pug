@@ -48,14 +48,14 @@ mixin dropdown(type='room', isExpanded=false, isControls=false, vals=[0,0,0])
                     span.dropdown__name=name
                     span.dropdown__controls
                         if vals[i]==minVal
-                            button.dropdown__button#button-minus(disabled) -
+                            button.dropdown__button.button-minus(disabled) -
                         else
-                           button.dropdown__button#button-minus - 
+                           button.dropdown__button.button-minus - 
                         span.dropdown__quantity=vals[i]
                         if vals[i]==maxVal
-                            button.dropdown__button#button-plus(disabled) +
+                            button.dropdown__button.button-plus(disabled) +
                         else
-                           button.dropdown__button#button-plus +
+                           button.dropdown__button.button-plus +
                 -i++
             if isControls
                 .dropdown__buttons
