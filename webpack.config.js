@@ -7,6 +7,8 @@ const scss = require('./webpack/scss')
 const images = require('./webpack/images')
 const fonts = require('./webpack/fonts')
 const devServer = require('./webpack/devserver')
+const prettier = require('./webpack/prettier')
+
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin')
@@ -106,7 +108,11 @@ const common = merge([{
 
 module.exports = function (env) {
     if (env === 'production') {
-        return common
+        return merge([
+            common,
+            prettier(),
+        ])
+
     }
     if (env === 'development') {
         return merge([
