@@ -1,0 +1,93 @@
+@mixin text($type: "body") {
+  @if $type== "h1" {
+    font-family: $Quicksand;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    color: #1f2041;
+  } @else if $type== "h2" {
+    font-family: $Quicksand;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 24px;
+    color: #1f2041;
+  } @else if $type== "h3" {
+    font-family: $Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #1f2041;
+  } @else if $type== "body" {
+    font-family: $Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(31, 32, 65, 0.75);
+  } @else if $type== "material" {
+    font-family: $Material;
+    font-style: normal;
+    font-weight: normal;
+  }
+}
+$Montserrat: Montserrat;
+$Material: "Material Icons";
+$Quicksand: Quicksand, "Open Sans";
+@mixin h1-text {
+  font-family: Quicksand, "Open Sans";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  color: #1f2041;
+}
+
+@mixin h2-text {
+  font-family: Quicksand, "Open Sans";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 24px;
+  color: #1f2041;
+}
+
+@mixin h3-text {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #1f2041;
+}
+
+@mixin body-text {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+}
+
+@mixin material-font {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: normal;
+}
+
+@mixin border($passive: true) {
+  box-sizing: border-box;
+  border-radius: 4px;
+  box-sizing: border-box;
+
+  @if $passive {
+    border: 1px solid $dark-shade25;
+  } @else {
+    border: 1px solid $dark-shade50;
+  }
+}
