@@ -1,5 +1,5 @@
 @import "../../template/template.scss";
-@import '../../styles/body.scss';
+@import "../../styles/body.scss";
 
 .room-details {
   &__images {
@@ -17,7 +17,8 @@
     object-fit: cover;
     width: 100%;
     height: 100%;
-    &:nth-child(2){      margin-bottom: -1px;
+    &:nth-child(2) {
+      margin-bottom: -1px;
     }
   }
   &__image:first-child {

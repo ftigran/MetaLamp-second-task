@@ -1,115 +1,113 @@
-@import '../../template/template.scss';
-@import '../../styles/body.scss';
+@import "../../template/template.scss";
+@import "../../styles/body.scss";
 
 .logo {
-    padding-left: 22px;
-    padding-top: 22px;
+  padding-left: 22px;
+  padding-top: 22px;
 }
 
 .container {
-    position: relative;
+  position: relative;
 }
 
 .color-collumn {
-    width: 270px;
-    padding-left: 143px;
-    padding-top: 68px;
-    position: relative;
+  width: 270px;
+  padding-left: 143px;
+  padding-top: 68px;
+  position: relative;
 
-    &__item {
-        margin-bottom: 28px;
-    }
+  &__item {
+    margin-bottom: 28px;
+  }
 
-    &__tile {
-        position: absolute;
-        border-radius: 6px;
-        width: 70px;
-        height: 70px;
-    }
+  &__tile {
+    position: absolute;
+    border-radius: 6px;
+    width: 70px;
+    height: 70px;
+  }
 
-    &__text {
-        display: inline-block;
-        margin-left: 110px;
-    }
+  &__text {
+    display: inline-block;
+    margin-left: 110px;
+  }
 
-    &__title {
-        padding-top: 8px;
-        margin: 0;
-        font-size: 19px;
-        line-height: 24px;
-    }
+  &__title {
+    padding-top: 8px;
+    margin: 0;
+    font-size: 19px;
+    line-height: 24px;
+  }
 
-    &__subtitle {
-        font-family: Montserrat;
-        font-size: 18px;
-        margin-top: 6px;
-    }
+  &__subtitle {
+    font-family: Montserrat;
+    font-size: 18px;
+    margin-top: 6px;
+  }
 }
 
 .type {
+  position: absolute;
+  left: 906px;
+  top: 68px;
+  width: 336px;
+
+  &__item {
+    margin-bottom: 50px;
+    position: relative;
+
+    &:nth-child(3) {
+      margin-bottom: 47px;
+    }
+  }
+
+  &__tag {
     position: absolute;
-    left: 906px;
-    top: 68px;
-    width: 336px;
+    left: -67px;
+    top: 2px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    color: $dark-shade25;
+    width: 37px;
+    text-align: right;
 
-    &__item {
-        margin-bottom: 50px;
-        position: relative;
-
-        &:nth-child(3) {
-            margin-bottom: 47px;
-
-        }
+    &_tag-h1 {
+      font-size: 24px;
     }
 
-    &__tag {
-        position: absolute;
-        left: -67px;
-        top: 2px;
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: normal;
-        color: $dark-shade25;
-        width: 37px;
-        text-align: right;
-
-        &_tag-h1 {
-            font-size: 24px;
-        }
-
-        &_tag-h2 {
-            font-size: 19px;
-            top: 0px;
-        }
-
-        &_tag-h3 {
-            font-size: 12px;
-            top: -4px;
-        }
-
-        &_tag-body {
-            font-size: 14px;
-            top: -3px;
-
-        }
+    &_tag-h2 {
+      font-size: 19px;
+      top: 0px;
     }
 
-    &__description {
-        &_tag-h1 {
-            @include h1-text;
-        }
-
-        &_tag-h2 {
-            @include h2-text;
-        }
-
-        &_tag-h3 {
-            @include h3-text;
-        }
-
-        &_tag-Body {
-            @include body-text;
-            width: 301px;
-        }
+    &_tag-h3 {
+      font-size: 12px;
+      top: -4px;
     }
+
+    &_tag-body {
+      font-size: 14px;
+      top: -3px;
+    }
+  }
+
+  &__description {
+    &_tag-h1 {
+      @include h1-text;
+    }
+
+    &_tag-h2 {
+      @include h2-text;
+    }
+
+    &_tag-h3 {
+      @include h3-text;
+    }
+
+    &_tag-Body {
+      @include body-text;
+      width: 301px;
+    }
+  }
 }

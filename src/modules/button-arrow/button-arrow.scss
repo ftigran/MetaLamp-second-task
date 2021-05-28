@@ -1,24 +1,24 @@
 @import "../../template/template.scss";
 .button-arrow {
-    @include text('h3');
-    padding-left: 1px;
-    position: relative;
-    
-    width: 100%;
-    height: 44px;
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    border-radius: 22px;
-    color: #fff;
-    border: none;
-    &:hover{
-        opacity: 0.5;
-    }
-    &::after {
-        position: absolute;
-        content: "arrow_forward";
-        text-transform: none;
-        font-size: 24px;
-        @include material-font;
-        right: 10px;
-    }
+  @include text("h3");
+  padding-left: 1px;
+  position: relative;
+
+  width: 100%;
+  height: 44px;
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  border-radius: 22px;
+  color: #fff;
+  border: none;
+  &:hover {
+    opacity: 0.5;
+  }
+  &::after {
+    position: absolute;
+    content: "arrow_forward";
+    text-transform: none;
+    font-size: 24px;
+    @include material-font;
+    right: 10px;
+  }
 }

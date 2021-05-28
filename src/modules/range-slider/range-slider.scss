@@ -12,7 +12,7 @@
     line-height: 25px;
   }
 }
-.irs.irs--flat.js-irs-0{
+.irs.irs--flat.js-irs-0 {
   margin-top: 15px;
   height: 16px;
 }
@@ -21,12 +21,11 @@
 .from {
   @include gradient("green");
 }
-.irs--flat .irs-bar{
+.irs--flat .irs-bar {
   top: 5px;
 }
-.irs--flat .irs-line{
+.irs--flat .irs-line {
   top: 4px;
-
 }
 .irs-handle.to,
 .irs-handle.from {

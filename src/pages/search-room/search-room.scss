@@ -1,5 +1,5 @@
 @import "../../template/template.scss";
-@import '../../styles/body.scss';
+@import "../../styles/body.scss";
 
 .search-room {
   margin-top: 70px;
@@ -87,7 +87,7 @@
     justify-content: center;
   }
   .rooms__title {
-    margin:11px 12px 21px;
+    margin: 11px 12px 21px;
     display: flex;
     justify-content: space-between;
   }

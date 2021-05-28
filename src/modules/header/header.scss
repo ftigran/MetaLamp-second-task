@@ -182,11 +182,11 @@
     }
   }
 }
-.header__burger, .header__link{
+.header__burger,
+.header__link {
   transition: transform 0.3s, opacity 0.3s;
-  &:hover{
+  &:hover {
     transform: scale(1.05);
     opacity: 0.8;
   }
-
 }

@@ -22,24 +22,23 @@
       color: $dark-shade50;
       padding-right: 10px;
       padding-top: 1px;
-
     }
-    &_expanded{
-        &::after {
-            content: "expand_less";
-        }
+    &_expanded {
+      &::after {
+        content: "expand_less";
+      }
     }
   }
 
   &__list {
-      transition: max-height 0.4s, opacity 0.3s;
-      opacity: 0;
-      max-height:0px;
-      overflow:hidden;
-      &_show{
-        max-height: 500px;
-        overflow:inherit;
-        opacity: 1;
-      }
+    transition: max-height 0.4s, opacity 0.3s;
+    opacity: 0;
+    max-height: 0px;
+    overflow: hidden;
+    &_show {
+      max-height: 500px;
+      overflow: inherit;
+      opacity: 1;
+    }
   }
 }

@@ -1,1 +1,1 @@
-import './checkbox-buttons.scss'
+import "./checkbox-buttons.scss";

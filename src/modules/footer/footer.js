@@ -1,4 +1,4 @@
-import './footer.scss'
+import "./footer.scss";
 
-import '../../modules/subscription-text-field/subscription-text-field'
-import '../../modules/logo/logo'
+import "../../modules/subscription-text-field/subscription-text-field";
+import "../../modules/logo/logo";

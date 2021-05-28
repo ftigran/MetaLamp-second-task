@@ -1,3 +1,3 @@
-import './review.scss'
+import "./review.scss";
 
-import '../like-button/like-button'
+import "../like-button/like-button";

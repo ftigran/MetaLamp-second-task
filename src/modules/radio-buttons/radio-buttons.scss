@@ -1,60 +1,60 @@
 @import "../../template/template.scss";
 .radio-buttons {
-    &__radio-button {
-        position: absolute;
-        z-index: -1;
-        opacity: 0;
-        margin: 0;
+  &__radio-button {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    margin: 0;
 
-        &:checked+.radio-buttons__label::after {
-            width: 12px;
-            height: 12px;
-            top: 4px;
-            left: -26px;
-        }
-
-        &:hover+.radio-buttons__label::before {
-            box-shadow: 0px 0px 3px 3px $purple;
-        }
+    &:checked + .radio-buttons__label::after {
+      width: 12px;
+      height: 12px;
+      top: 4px;
+      left: -26px;
     }
 
-    &__label {
-        @include body-text;
-        margin-left: 30px;
-
-        &:first-of-type {
-            margin-right: 16px;
-        }
-
-        position: relative;
-
-        &::before {
-            transition: 0.25s ease-out;
-            position: absolute;
-            left: -30px;
-            content: "";
-            display: inline-block;
-            top: 0px;
-            margin-right: 10px;
-            border: 1px solid #bc9cff;
-            box-sizing: border-box;
-            border-radius: 50%;
-            width: 20px;
-            height: 20px;
-        }
-
-        &::after {
-            background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-            transition: 0.25s ease-out;
-            position: absolute;
-            left: -19px;
-            content: "";
-            display: inline-block;
-            top: 10px;
-            margin-right: 10px;
-            border-radius: 50%;
-            width: 0px;
-            height: 0px;
-        }
+    &:hover + .radio-buttons__label::before {
+      box-shadow: 0px 0px 3px 3px $purple;
     }
+  }
+
+  &__label {
+    @include body-text;
+    margin-left: 30px;
+
+    &:first-of-type {
+      margin-right: 16px;
+    }
+
+    position: relative;
+
+    &::before {
+      transition: 0.25s ease-out;
+      position: absolute;
+      left: -30px;
+      content: "";
+      display: inline-block;
+      top: 0px;
+      margin-right: 10px;
+      border: 1px solid #bc9cff;
+      box-sizing: border-box;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+    }
+
+    &::after {
+      background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+      transition: 0.25s ease-out;
+      position: absolute;
+      left: -19px;
+      content: "";
+      display: inline-block;
+      top: 10px;
+      margin-right: 10px;
+      border-radius: 50%;
+      width: 0px;
+      height: 0px;
+    }
+  }
 }

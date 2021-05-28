@@ -1,1 +1,1 @@
-import './button-arrow.scss'
+import "./button-arrow.scss";

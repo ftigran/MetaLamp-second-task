@@ -1,4 +1,4 @@
 //import './sign-in.scss'
 
-import '../../modules/enter-page/enter-page'
-import '../../modules/enter/enter'
+import "../../modules/enter-page/enter-page";
+import "../../modules/enter/enter";

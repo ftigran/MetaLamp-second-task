@@ -1,4 +1,4 @@
-import './enter-page.scss'
+import "./enter-page.scss";
 
-import '../header/header'
-import '../footer/footer'
+import "../header/header";
+import "../footer/footer";

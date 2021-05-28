@@ -1,1 +1,1 @@
-import './button-border.scss'
+import "./button-border.scss";

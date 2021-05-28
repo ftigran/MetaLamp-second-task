@@ -1,5 +1,5 @@
 @import "../../template/template.scss";
-@import '../../styles/body.scss';
+@import "../../styles/body.scss";
 
 body {
   margin: 30px;
@@ -18,15 +18,14 @@ body {
   &-inline-block {
     display: inline-block;
   }
-  &__gap{
+  &__gap {
     margin-top: 100px;
   }
-  &-266{
+  &-266 {
     width: 266px;
   }
-  &-320{
+  &-320 {
     width: 320px;
-
   }
 }
 .block-wrapper {
@@ -60,9 +59,9 @@ body {
   }
 }
 .wrapper__button {
-    display: inline-block;
-    margin-right:20px;
-    margin-bottom: 30px;
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 30px;
   width: 99px;
   height: 44px;
 }

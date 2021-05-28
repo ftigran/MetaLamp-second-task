@@ -1,18 +1,18 @@
 @import "../../template/template.scss";
-.button-fill{
-    @include h3-text;
-    height: 44px;
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    border-radius: 100px;
-    border: none;
-    color: #fff;
-    height: 100%;
-    width: 100%;
-    //padding: 14px 19px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    &:hover{
-        opacity: 0.5;
-    }
+.button-fill {
+  @include h3-text;
+  height: 44px;
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  border-radius: 100px;
+  border: none;
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  //padding: 14px 19px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    opacity: 0.5;
+  }
 }

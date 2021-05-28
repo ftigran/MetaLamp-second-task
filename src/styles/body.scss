@@ -1,4 +1,4 @@
-@import './mixins.scss';
+@import "./mixins.scss";
 
 body,
 a,
@@ -23,6 +23,6 @@ h2 {
 h3 {
   @include h3-text;
 }
-body{
+body {
   margin: 0;
 }

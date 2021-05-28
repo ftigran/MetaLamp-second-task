@@ -1,25 +1,25 @@
 @import "../../template/template.scss";
 .text-field {
-    &__input {
-        @include text('body');
-        height: 44px;
-        width: 100%;
-        @include border;
-        padding-left: 14px;
-        color: $dark-shade25;
+  &__input {
+    @include text("body");
+    height: 44px;
+    width: 100%;
+    @include border;
+    padding-left: 14px;
+    color: $dark-shade25;
 
-        &::placeholder {
-            color: $dark-shade25;
-        }
-
-        &:focus,
-        &:hover {
-            border-color: rgba(31, 32, 65, 0.5);
-            color: $dark-shade75;
-
-            &::placeholder {
-                color: $dark-shade75;
-            }
-        }
+    &::placeholder {
+      color: $dark-shade25;
     }
+
+    &:focus,
+    &:hover {
+      border-color: rgba(31, 32, 65, 0.5);
+      color: $dark-shade75;
+
+      &::placeholder {
+        color: $dark-shade75;
+      }
+    }
+  }
 }

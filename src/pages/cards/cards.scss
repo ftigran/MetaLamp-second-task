@@ -1,19 +1,18 @@
-@import '../../template/template.scss';
-@import '../../styles/body.scss';
+@import "../../template/template.scss";
+@import "../../styles/body.scss";
 
 body {
-    background: #E5E5E5;
+  background: #e5e5e5;
 }
 
 .container {
-    padding: 72px 140px 140px 62px;
-    display:  flex;
+  padding: 72px 140px 140px 62px;
+  display: flex;
 }
-.col{
-min-width: 460px;
-flex-shrink: 0;
-
+.col {
+  min-width: 460px;
+  flex-shrink: 0;
 }
 .wrapper {
-    margin: 40px;
+  margin: 40px;
 }

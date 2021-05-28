@@ -1,4 +1,4 @@
-import './registration.scss'
+import "./registration.scss";
 
-import '../../modules/enter-page/enter-page'
-import '../../modules/registration/registration'
+import "../../modules/enter-page/enter-page";
+import "../../modules/registration/registration";

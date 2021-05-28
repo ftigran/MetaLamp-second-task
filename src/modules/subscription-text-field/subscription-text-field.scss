@@ -1,27 +1,27 @@
 @import "../../template/template.scss";
 .subscription-text-field {
-    position: relative;
-    max-width: 267px;
+  position: relative;
+  max-width: 267px;
 
-    &__ico {
-        display: block;
-        text-align: center;
-        line-height: 40px;
-        @include material-font;
-        font-size: 24px;
-        mix-blend-mode: screen;
-        background-color: #ffffff;
-        width: 40px;
-        height: 40px;
-        border: none;
-        margin: -1px;
+  &__ico {
+    display: block;
+    text-align: center;
+    line-height: 40px;
+    @include material-font;
+    font-size: 24px;
+    mix-blend-mode: screen;
+    background-color: #ffffff;
+    width: 40px;
+    height: 40px;
+    border: none;
+    margin: -1px;
 
-        &-wrapper {
-            position: absolute;
-            right: 3px;
-            top: 3px;
-            border-radius: 50%;
-            background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-        }
+    &-wrapper {
+      position: absolute;
+      right: 3px;
+      top: 3px;
+      border-radius: 50%;
+      background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
     }
+  }
 }

@@ -1,5 +1,5 @@
 @import "../../template/template.scss";
-@import '../../styles/body.scss';
+@import "../../styles/body.scss";
 
 .enter-page {
   background: url("../../img/login-background.jpg") no-repeat;
@@ -22,7 +22,8 @@ body {
   .enter-page__container {
     padding: 0 10px;
   }
-  html .enter,html .registration{
+  html .enter,
+  html .registration {
     padding-left: 10px;
     padding-right: 10px;
   }

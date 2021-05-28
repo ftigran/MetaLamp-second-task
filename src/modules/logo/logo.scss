@@ -1,14 +1,14 @@
 .logo__text {
-    //margin-top: 13px;
-    margin-bottom: 13px;
-    margin-left: 9px;
+  //margin-top: 13px;
+  margin-bottom: 13px;
+  margin-left: 9px;
 }
 
 .logo {
-    width: 114px;
-    flex-shrink: 0;
-    cursor: pointer;
-    &__link{
-        text-decoration: none;
-    }
+  width: 114px;
+  flex-shrink: 0;
+  cursor: pointer;
+  &__link {
+    text-decoration: none;
+  }
 }
