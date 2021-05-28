@@ -18,7 +18,7 @@ const webpack = require('webpack')
 
 const PATHS = {
     source: path.join(__dirname, 'src'),
-    build: path.join(__dirname, 'build/Toxin')
+    build: path.join(__dirname, 'build')
 }
 
 const common = merge([{
@@ -103,7 +103,7 @@ const common = merge([{
     },
     pug(),
     scss(),
-    images(),
+    images(PATHS.source,PATHS.build),
     fonts()
 ])
 

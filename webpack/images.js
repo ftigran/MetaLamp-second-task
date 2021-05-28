@@ -1,4 +1,6 @@
-module.exports = function () {
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+
+module.exports = function(source, build) {
     return {
         module: {
             rules: [{
@@ -9,5 +11,21 @@ module.exports = function () {
                 },
             }, ],
         },
+        plugins: [
+            new CopyWebpackPlugin({
+                patterns: [
+                  {
+                    from: source+'/img/',
+                    to: build+'/images/',
+                    toType: 'dir',
+                  },
+                //   {
+                //     from: 'src/files/',
+                //     to: 'files/',
+                //     toType: 'dir',
+                //   },
+                ]
+              }),
+          ],
     };
-};
+}
