@@ -17,6 +17,8 @@
     object-fit: cover;
     width: 100%;
     height: 100%;
+    &:nth-child(2){      margin-bottom: -1px;
+    }
   }
   &__image:first-child {
     grid-area: a;
