@@ -8,6 +8,7 @@ const images = require('./webpack/images')
 const fonts = require('./webpack/fonts')
 const devServer = require('./webpack/devserver')
 const prettier = require('./webpack/prettier')
+const clean = require('./webpack/clean')
 
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
@@ -17,7 +18,7 @@ const webpack = require('webpack')
 
 const PATHS = {
     source: path.join(__dirname, 'src'),
-    build: path.join(__dirname, 'build')
+    build: path.join(__dirname, 'build/Toxin')
 }
 
 const common = merge([{
@@ -111,6 +112,7 @@ module.exports = function (env) {
         return merge([
             common,
             prettier(),
+            clean()
         ])
 
     }
