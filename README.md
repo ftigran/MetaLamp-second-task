@@ -1,5 +1,5 @@
 # fsd-second-task
-Второе задание в рамках программы обучения компании Fullstack Development.
+Второе задание в рамках программы обучения компании MetaLamp (бывший Fullstack Development).
 # Развёртывание
 `npm i`
 `npm run start` - запуск dev server
@@ -7,15 +7,15 @@
 `npm run build` - сборка в режиме продакшн
 
 # Страницы
-+ [index](https://ftigran.github.io/fsd-second-task/build/)
++ [index](https://ftigran.github.io/pages/Toxin/)
  ## UI kit
-+ [Colors & Types](https://ftigran.github.io/fsd-second-task/build/colors-and-type.html);
-+ [Form elements](https://ftigran.github.io/fsd-second-task/build/form-elements.html);
-+ [Headers & footers](https://ftigran.github.io/fsd-second-task/build/headers-and-footers.html);
-+ [Cards](https://ftigran.github.io/fsd-second-task/build/cards.html);
++ [Colors & Types](https://ftigran.github.io/pages/Toxin/colors-and-type.html);
++ [Form elements](https://ftigran.github.io/pages/Toxin/form-elements.html);
++ [Headers & footers](https://ftigran.github.io/pages/Toxin/headers-and-footers.html);
++ [Cards](https://ftigran.github.io/pages/Toxin/cards.html);
 ## Website pages
-+ [Landing page](https://ftigran.github.io/fsd-second-task/build/landing-page.html);
-+ [Search room](https://ftigran.github.io/fsd-second-task/build/search-room.html);
-+ [Room details](https://ftigran.github.io/fsd-second-task/build/room-details.html);
-+ [Registration](https://ftigran.github.io/fsd-second-task/build/registration.html);
-+ [Sign-in](https://ftigran.github.io/fsd-second-task/build/sign-in.html);
++ [Landing page](https://ftigran.github.io/pages/Toxin/landing-page.html);
++ [Search room](https://ftigran.github.io/pages/Toxin/search-room.html);
++ [Room details](https://ftigran.github.io/pages/Toxin/room-details.html);
++ [Registration](https://ftigran.github.io/pages/Toxin/registration.html);
++ [Sign-in](https://ftigran.github.io/pages/Toxin/sign-in.html);
