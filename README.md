@@ -1,10 +1,15 @@
 # fsd-second-task
 Второе задание в рамках программы обучения компании MetaLamp (бывший Fullstack Development).
 # Развёртывание
-`npm i`
+
+`npm i` установка зависимостей
+
 `npm run start` - запуск dev server
+
 `npm run dev` - сборка в режиме разработки
+
 `npm run build` - сборка в режиме продакшн
+
 # Дизайн
 + [figma](https://www.figma.com/file/MumYcKVk9RkKZEG6dR5E3A/MetaLamp-(former-FSD)-frontend-education-program.-The-2nd-task?node-id=0%3A1)
 # Страницы
